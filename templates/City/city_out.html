@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}Города{% endblock %}
+
+{% block content %}
+
+    <div class="header">
+        <div class="header-container">
+            <div class="row">
+                <a href="{% url "home_page" %}"><h6 class="h6-header">Home</h6></a><h6 class="h6-header">/</h6>
+                <a href="{% url "city_out" %}"><h6 class="h6-header">Region</h6></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 align="center" class="h1-out">{{ city_verbose }}</h1>
+    </div>
+    <div class="container out-container">
+        <table class="table table-light border table-hover" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>Создан</th>
+                <td colspan="2" align="center">
+                    <form action="{% url "city_add" %}">
+                        <button type="submit" class="btn btn-success" title="Добавить"><i
+                                class="fas fa-plus-square"></i></button>
+                    </form>
+                </td>
+            </tr>
+            </thead>
+            {% for city in city_list %}
+                <tr>
+                    <th>{{ city.id }}</th>
+                    <td>{{ city.city_name }}</td>
+                    <td>{{ city.created }}</td>
+                    <td align="center"><a href="{% url "city_edit" city.id %}"><i class="fas fa-edit"
+                                                                                        title="Изменить"></i></a>
+                    </td>
+                    <td align="center"><a href="{% url "city_delete" city.id %}"><i class="far fa-trash-alt" title="Удалить"></i></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

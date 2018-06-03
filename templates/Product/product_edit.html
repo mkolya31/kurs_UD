@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать товар{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "product_out" %}">Product</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h1>Редактировать: {{ product }}</h1>
+    </div>
+
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <th>Название</th>
+                    <td>{{ form.product_name }}</td>
+                </tr>
+                <tr>
+                    <th>Артикл</th>
+                    <td>{{ form.product_article }}</td>
+                </tr>
+                <tr>
+                    <th>Цена</th>
+                    <td>{{ form.product_price }}</td>
+                </tr>
+                <tr>
+                    <th>Валюта</th>
+                    <td>{{ form.product_currency }}</td>
+                </tr>
+                <tr>
+                    <th>Единица измерения</th>
+                    <td>{{ form.product_unit }}</td>
+                </tr>
+                <tr>
+                    <th>Магазин</th>
+                    <td>{{ form.product_store }}<a href="{% url "store_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "store_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                            Change</a></td>
+                </tr>
+                <tr>
+                    <th>Производитель</th>
+                    <td>{{ form.product_manufacturer }}<a href="{% url "manufacturer_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "manufacturer_out" %}" target="_blank"><i
+                                class="fas fa-pencil-alt home-icon"></i> Change</a></td>
+                </tr>
+                <tr>
+                    <th>Категория</th>
+                    <td>{{ form.product_category }}<a href="{% url "category_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "category_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                            Change</a></td>
+                </tr>
+                <tr>
+                    <th>Поставщик</th>
+                    <td>{{ form.product_provider }}<a href="{% url "provider_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "provider_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                            Change</a></td>
+                </tr>
+                <tr>
+                    <th>Создан</th>
+                    <td>{{ product.created }}</td>
+                </tr>
+                <tr>
+                    <th>Обновлён</th>
+                    <td>{{ product.updated }}</td>
+                </tr>
+            </table>
+            <div class="row">
+                <div class="col"><a href="{% url "product_delete" product.id %}"><input type="button"
+                                                                                        class="btn btn-danger"
+                                                                                        value="Удалить"></a>
+                </div>
+                <div class="col" align="right"><a href="../../../product"><input type="button"
+                                                                                 class="btn btn-light"
+                                                                                 value="Отменить"></a>
+                    <a href="../../../product"><input type="submit" class="btn btn-success"></a></div>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block title %}Удалить Client{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1>Удалить покупателя</h1>
+    </div>
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <p>Do you want to delete Client: {{ client }}</p>
+            <p>
+                <input type="submit" class="btn-danger" value="Yes" name="Yes">
+                <input type="submit" class="btn-light" value="No" name="No">
+            </p>
+        </form>
+        <h1><a href="{% url "customer_out" %}">Return to menu</a></h1>
+    </div>
+{% endblock %}

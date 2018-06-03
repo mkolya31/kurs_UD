@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить поставщика{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "provider_out" %}">Provider</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h1>Добавить поставщика</h1>
+    </div>
+
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <th>Название</th>
+                    <td>{{ form.provider_name }}</td>
+                </tr>
+                <tr>
+                    <th>Организация</th>
+                    <td>{{ form.provider_org }}<a href="{% url "organization_add" %}" target="_blank"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "organization_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i> Change</a></td>
+                </tr>
+            </table>
+            <div class="row">
+                <div class="col" align="right"><p>
+                    <a href="../../../provider"><input type="button" class="btn btn-secondary"
+                                                           value="Discard changes"></a>
+                    <a href="../../../provider"><input type="submit" class="btn btn-success"></a>
+                </p></div>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

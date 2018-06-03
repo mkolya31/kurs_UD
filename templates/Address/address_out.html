@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+    <li class="breadcrumb-item active">Address</li>
+  </ol>
+</nav>
+
+    <div class="container">
+        <h1 align="center" class="h1-out">{{ address_verbose }}</h1>
+    </div>
+    <div class="out-container">
+        <table class="table table-light border table-hover" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Индекс</th>
+                <th>Страна</th>
+                <th>Регион</th>
+                <th>Город</th>
+                <th>Улица</th>
+                <th>Дом</th>
+                <th>Квартира</th>
+                <td colspan="2" align="center">
+                    <form action="{% url "address_add" %}">
+                        <button type="submit" class="btn btn-success" title="Добавить"><i
+                                class="fas fa-plus-square"></i></button>
+                    </form>
+                </td>
+            </tr>
+            </thead>
+            {% for address in address_list %}
+                <tr>
+                    <th>{{ address.id }}</th>
+                    <td>{{ address.address_zip }}</td>
+                    <td>{{ address.address_country }}</td>
+                    <td>{{ address.address_region }}</td>
+                    <td>{{ address.address_city }}</td>
+                    <td>{{ address.address_street }}</td>
+                    <td>{{ address.address_house }}</td>
+                    <td>{{ address.address_flat }}</td>
+                    <td align="center"><a href="{% url "address_edit" address.id %}"><i class="fas fa-edit"
+                                                                                        title="Изменить"></i></a>
+                    </td>
+                    <td><a href="{% url "address_delete" address.id %}"><i class="far fa-trash-alt" title="Удалить"></i></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

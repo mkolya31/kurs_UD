@@ -1,0 +1,45 @@
+{% load static %}
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="{% url "home_page" %}">И.П. Коляченко</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample05"
+            aria-controls="navbarsExample05" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarsExample05">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url "home_page" %}">Домой <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Ссылка</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown05" data-toggle="dropdown"
+                   aria-haspopup="true" aria-expanded="false">Таблицы</a>
+                <div class="dropdown-menu" aria-labelledby="dropdown05">
+                    <a class="dropdown-item" href="{% url "customer_out" %}">Покупатели</a>
+                    <a class="dropdown-item" href="{% url "address_out" %}">Адреса</a>
+                    <a class="dropdown-item" href="{% url "bank_out" %}">Банки</a>
+                    <a class="dropdown-item" href="{% url "delivery_out" %}">Доставки</a>
+                    <a class="dropdown-item" href="{% url "deliveryType_out" %}">Типы доставок</a>
+                    <a class="dropdown-item" href="{% url "paymentType_out" %}">Типы платежей</a>
+                    <a class="dropdown-item" href="{% url "country_out" %}">Страны</a>
+                    <a class="dropdown-item" href="{% url "region_out" %}">Регионы</a>
+                    <a class="dropdown-item" href="{% url "city_out" %}">Города</a>
+                    <a class="dropdown-item" href="{% url "category_out" %}">Категории</a>
+                    <a class="dropdown-item" href="{% url "payment_out" %}">Платежи</a>
+                    <a class="dropdown-item" href="{% url "organization_out" %}">Организации</a>
+                    <a class="dropdown-item" href="{% url "store_out" %}">Магазины</a>
+                    <a class="dropdown-item" href="{% url "manufacturer_out" %}">Производители</a>
+                    <a class="dropdown-item" href="{% url "provider_out" %}">Поставщики</a>
+                    <a class="dropdown-item" href="{% url "product_out" %}">Товары</a>
+                </div>
+            </li>
+        </ul>
+        <form class="form-inline my-2 my-md-0">
+            <input class="form-control" type="text" placeholder="Search">
+        </form>
+    </div>
+</nav>

@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Удалить регион{% endblock%}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "region_out" %}">Region</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Delete</li>
+        </ol>
+    </nav>
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <table>
+                <tr>
+                    <td><h1 align="right">Удалить: {{ region }}?</h1></td>
+                    <td class="delete-button-td">
+                        <input type="submit" class="btn btn-danger btn-delete" value="Yes" name="Yes">
+                        <input type="submit" class="btn btn-light btn-delete" value="No" name="No">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <div class="container del-container">
+        <table class="table table-light border" align="center">
+            <tr>
+                <th>Название</th>
+                <td>{{ region.region_name }}</td>
+            </tr>
+            <tr>
+                <th>Создан</th>
+                <td>{{ region.created }}</td>
+            </tr>
+            <tr>
+                <th>Обновлён</th>
+                <td>{{ region.updated }}</td>
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}

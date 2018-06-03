@@ -1,0 +1,92 @@
+{% extends "base.html" %}
+
+{% block title %}Удалить организацию{% endblock %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "organization_out" %}">Organization</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Delete</li>
+        </ol>
+    </nav>
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <table>
+                <tr>
+                    <td><h1 align="right">Удалить: {{ organization }}?</h1></td>
+                    <td class="delete-button-td">
+                        <input type="submit" class="btn btn-danger btn-delete" value="Yes" name="Yes">
+                        <input type="submit" class="btn btn-light btn-delete" value="No" name="No">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <div class="container del-container">
+        <table class="table table-light border" align="center">
+            <tr>
+                <th>Тип</th>
+                <td>{{ organization.org_type }}</td>
+            </tr>
+            <tr>
+                <th>Название</th>
+                <td>{{ organization.org_name }}</td>
+            </tr>
+            <tr>
+                <th>Телефон</th>
+                <td>{{ organization.org_phone }}</td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td>{{ organization.org_email }}</td>
+            </tr>
+            <tr>
+                <th>Сайт</th>
+                <td>{{ organization.org_website }}</td>
+            </tr>
+            <tr>
+                <th>Контактное лицо</th>
+                <td>{{ organization.org_contact_person }}</td>
+            </tr>
+            <tr>
+                <th>ИНН</th>
+                <td>{{ organization.org_INN }}</td>
+            </tr>
+            <tr>
+                <th>КПП</th>
+                <td>{{ organization.org_KPP }}</td>
+            </tr>
+            <tr>
+                <th>ОРГН</th>
+                <td>{{ organization.org_OGRN }}</td>
+            </tr>
+            <tr>
+                <th>ОКПО</th>
+                <td>{{ organization.org_OKPO }}</td>
+            </tr>
+            <tr>
+                <th>Расчётный счёт</th>
+                <td>{{ organization.org_checking_account }}</td>
+            </tr>
+            <tr>
+                <th>Банк</th>
+                <td>{{ organization.org_bank }}</td>
+            </tr>
+            <tr>
+                <th>Создан</th>
+                <td>{{ organization.created }}</td>
+            </tr>
+            <tr>
+                <th>Обновлён</th>
+                <td>{{ organization.updated }}</td>
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}

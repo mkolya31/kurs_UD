@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать регион{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "region_out" %}">Region</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h1>Редактировать: {{ region }}</h1>
+    </div>
+
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <th>Название</th>
+                    <td>{{ form.region_name }}</td>
+                </tr>
+                <tr>
+                    <th>Создан</th>
+                    <td>{{ region.created }}</td>
+                </tr>
+                <tr>
+                    <th>Обновлён</th>
+                    <td>{{ region.updated }}</td>
+                </tr>
+            </table>
+            <div class="row">
+                <div class="col"><a href="{% url "region_delete" region.id %}"><input type="button"
+                                                                                        class="btn btn-danger"
+                                                                                        value="Удалить"></a>
+                </div>
+                <div class="col" align="right"><a href="../../../region"><input type="button"
+                                                                                 class="btn btn-light"
+                                                                                 value="Отменить"></a>
+                    <a href="../../../region"><input type="submit" class="btn btn-success"></a></div>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

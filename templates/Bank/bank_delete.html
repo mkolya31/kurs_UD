@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Удалить адрес{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "bank_out" %}">Banks</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Delete</li>
+        </ol>
+    </nav>
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <table>
+                <tr>
+                    <td><h1 align="right">Удалить: {{ bank }}?</h1></td>
+                    <td class="delete-button-td">
+                        <input type="submit" class="btn btn-danger btn-delete" value="Yes" name="Yes">
+                        <input type="submit" class="btn btn-light btn-delete" value="No" name="No">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <div class="container del-container">
+        <table class="table table-light border table-hover" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th>Поле</th>
+                <th>Значение</th>
+            </tr>
+            </thead>
+            <tr>
+                <td>Название</td>
+                <td>{{ bank.bank_name }}</td>
+            </tr>
+            <tr>
+                <td>БИК</td>
+                <td>{{ bank.bank_BIK }}</td>
+            </tr>
+            <tr>
+                <td>Корр. счёт</td>
+                <td>{{ bank.bank_corr_account }}</td>
+            </tr>
+            <tr>
+                <td>Создан</td>
+                <td>{{ bank.created }}</td>
+            </tr>
+            <tr>
+                <td>Обновлён</td>
+                <td>{{ bank.updated }}</td>
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}

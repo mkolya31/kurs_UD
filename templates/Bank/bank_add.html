@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить Банк{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "bank_out" %}">Banks</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+    </div>
+
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <td>Название</td>
+                    <td>{{ form.bank_name }}</td>
+                </tr>
+                <tr>
+                    <td>БИК</td>
+                    <td>{{ form.bank_BIK }}</td>
+                </tr>
+                <tr>
+                    <td>Корр. счёт</td>
+                    <td>{{ form.bank_corr_account }}</td>
+                </tr>
+            </table>
+            <p>
+                <a href="../../../bank"><input type="submit" class="btn btn-success"></a>
+                <a href="../../../bank"><input type="button" class="btn btn-secondary" value="Discard changes"></a>
+            </p>
+        </form>
+    </div>
+{% endblock content %}

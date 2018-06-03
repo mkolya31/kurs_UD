@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block title %}Производители{% endblock %}
+
+{% block content %}
+
+    <div class="header">
+        <div class="header-container">
+            <div class="row">
+                <a href="{% url "home_page" %}"><h6 class="h6-header">Home</h6></a><h6 class="h6-header">/</h6>
+                <a href="{% url "manufacturer_out" %}"><h6 class="h6-header">Manufacturer</h6></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 align="center" class="h1-out">{{ manufacturer_verbose }}</h1>
+    </div>
+
+    <div class="container out-container">
+        <table class="table table-light border table-hover" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>Организация</th>
+                <td colspan="2" align="center">
+                    <form action="{% url "manufacturer_add" %}">
+                        <button type="submit" class="btn btn-success" title="Добавить"><i
+                                class="fas fa-plus-square"></i></button>
+                    </form>
+                </td>
+            </tr>
+            </thead>
+            {% for manufacturer in manufacturer_list %}
+                <tr>
+                    <th>{{ manufacturer.id }}</th>
+                    <td>{{ manufacturer.man_name }}</td>
+                    <td>{{ manufacturer.man_org}}</td>
+                    <td align="center"><a href="{% url "manufacturer_edit" manufacturer.id %}"><i class="fas fa-edit"
+                                                                                        title="Изменить"></i></a>
+                    </td>
+                    <td align="center"><a href="{% url "manufacturer_delete" manufacturer.id %}"><i class="far fa-trash-alt" title="Удалить"></i></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

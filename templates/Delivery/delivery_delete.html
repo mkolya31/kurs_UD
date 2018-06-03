@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Удалить доставку{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "delivery_out" %}">Delivery</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Delete</li>
+        </ol>
+    </nav>
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <table>
+                <tr>
+                    <td><h1 align="right">Удалить: {{ delivery }}?</h1></td>
+                    <td class="delete-button-td">
+                        <input type="submit" class="btn btn-danger btn-delete" value="Yes" name="Yes">
+                        <input type="submit" class="btn btn-light btn-delete" value="No" name="No">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <div class="container del-container">
+        <table class="table table-light border" align="center">
+            <tr>
+                <th>Заказ</th>
+                <td>{{ delivery.delivery_order }}</td>
+            </tr>
+            <tr>
+                <th>Тип</th>
+                <td>{{ delivery.delivery_type }}</td>
+            </tr>
+            <tr>
+                <th>Адрес</th>
+                <td>{{ delivery.delivery_address }}</td>
+            </tr>
+            <tr>
+                <th>Дата доставки</th>
+                <td>{{ delivery.delivery_date }}</td>
+            </tr>
+            <tr>
+                <th>Стоимость</th>
+                <td>{{ delivery.delivery_price }}</td>
+            </tr>
+            <tr>
+                <th>Статус</th>
+                <td>{{ delivery.delivery_status }}</td>
+            </tr>
+            <tr>
+                <th>Создан</th>
+                <td>{{ delivery.created }}</td>
+            </tr>
+            <tr>
+                <th>Обновлён</th>
+                <td>{{ delivery.updated }}</td>
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}

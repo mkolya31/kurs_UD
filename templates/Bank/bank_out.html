@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <div class="header">
+        <div class="header-container">
+            <div class="row">
+                <a href="{% url "home_page" %}"><h6 class="h6-header">Home</h6></a><h6 class="h6-header">/</h6>
+                <a href="{% url "bank_out" %}"><h6 class="h6-header">Banks</h6></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 align="center" class="h1-out">{{ bank_verbose }}</h1>
+    </div>
+    <div class="container out-container">
+        <table class="table table-light border table-hover" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>БИК</th>
+                <th>Корр. счёт</th>
+                <th>Создан</th>
+                <td colspan="2" align="center">
+                    <form action="{% url "bank_add" %}">
+                        <button type="submit" class="btn btn-success" title="Добавить"><i
+                                class="fas fa-plus-square"></i></button>
+                    </form>
+                </td>
+            </tr>
+            </thead>
+            {% for bank in bank_list %}
+                <tr>
+                    <th>{{ bank.id }}</th>
+                    <td>{{ bank.bank_name }}</td>
+                    <td>{{ bank.bank_BIK }}</td>
+                    <td>{{ bank.bank_corr_account }}</td>
+                    <td>{{ bank.created }}</td>
+                    <td align="center"><a href="{% url "bank_edit" bank.id %}"><i class="fas fa-edit"
+                                                                                        title="Изменить"></i></a>
+                    </td>
+                    <td align="center"><a href="{% url "bank_delete" bank.id %}"><i class="far fa-trash-alt" title="Удалить"></i></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

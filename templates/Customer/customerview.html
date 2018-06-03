@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 align="center">{{ customer }}. Полные сведения.</h1>
+    <div class="container">
+        <table class="table table-light border table-hover" align="center">
+            <thead class="thead-dark">
+            <tr>
+                    <th>Поле</th>
+                    <th>Значение</th>
+            </tr>
+            </thead>
+            <tr>
+                <th>ID</th>
+                <td>{{ customer.id }}</td>
+            </tr>
+            <tr>
+                <th>Имя</th>
+                <td>{{ customer.c_firstname }}</td>
+            </tr>
+            <tr>
+                <th>Фамилия</th>
+                <td>{{ customer.c_secondname }}</td>
+            </tr>
+            <tr>
+                <th>Телефон</th>
+                <td>{{ customer.c_phone }}</td>
+            </tr>
+            <tr>
+                <th>E-mail</th>
+                <td>{{ customer.c_email }}</td>
+            </tr>
+            <tr>
+                <th>Адрес</th>
+                <td>{{ customer.c_address}}</td>
+            </tr>
+            <tr>
+                <th>Организация</th>
+                <td>{{ customer.c_organization }}</td>
+            </tr>
+            <tr>
+                <th>Комментарий</th>
+                <td>{{ customer.c_comments }}</td>
+            </tr>
+        </table>
+    <div class="row">
+        <div class="col"><h1><a href="{% url "customer_out" %}">Назад к таблице</a></h1></div>
+        <div class="col"><h1><a href="{% url "customer_edit" customer.id %}">Редактировать</a></h1></div>
+        <div class="col"><h1><a href="{% url "customer_delete" customer.id %}">Удалить</a></h1></div>
+    </div>
+    </div>
+{% endblock %}

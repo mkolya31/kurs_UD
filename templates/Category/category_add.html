@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить категорию{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "category_out" %}">Category</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h1>Добавить категорию</h1>
+    </div>
+
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <th>Название</th>
+                    <td>{{ form.cat_name }}</td>
+                </tr>
+                <tr>
+                    <th>Родитель</th>
+                    <td>{{ form.cat_parent }}</td>
+                </tr>
+            </table>
+            <div class="row">
+                <div class="col" align="right"><p>
+                    <a href="../../../category"><input type="button" class="btn btn-secondary"
+                                                   value="Discard changes"></a>
+                    <a href="../../../category"><input type="submit" class="btn btn-success"></a>
+                </p></div>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить Адрес{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "address_out" %}">Address</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+    </div>
+
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <td>Индекс</td>
+                    <td>{{ form.address_zip }}</td>
+                </tr>
+                <tr>
+                    <td>Страна</td>
+                    <td>{{ form.address_country }}</td>
+                </tr>
+                <tr>
+                    <td>Регион</td>
+                    <td>{{ form.address_region }}</td>
+                </tr>
+                <tr>
+                    <td>Город</td>
+                    <td>{{ form.address_city }}</td>
+                </tr>
+                <tr>
+                    <td>Улица</td>
+                    <td>{{ form.address_street }}</td>
+                </tr>
+                <tr>
+                    <td>Дом</td>
+                    <td>{{ form.address_house }}</td>
+                </tr>
+                <tr>
+                    <td>Квартира</td>
+                    <td>{{ form.address_flat }}</td>
+                </tr>
+            </table>
+            <p>
+                <a href="../../../address"><input type="submit" class="btn btn-success"></a>
+                <a href="../../../address"><input type="button" class="btn btn-secondary" value="Discard changes"></a>
+            </p>
+        </form>
+    </div>
+{% endblock content %}

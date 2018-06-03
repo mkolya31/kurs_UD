@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="container home-container">
+
+
+        <table class="table table-light border" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th colspan="2">Заказы</th>
+            </tr>
+            </thead>
+            <tr>
+                <th><a href="{% url "order_out" %}">Заказы</a></th>
+                <td align="right">
+                    <h6><a href="{% url "order_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "order_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "customer_out" %}">Покупатели</a></th>
+                <td align="right">
+                    <h6><a href="{% url "customer_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "customer_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "payment_out" %}">Платежи</a></th>
+                <td align="right">
+                    <h6><a href="{% url "payment_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "payment_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "delivery_out" %}">Доставки</a></th>
+                <td align="right">
+                    <h6><a href="{% url "delivery_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "delivery_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+        </table>
+
+
+        <table class="table table-light border" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th colspan="2">Товары</th>
+            </tr>
+            </thead>
+            <tr>
+                <th><a href="{% url "product_out" %}">Товары</a></th>
+                <td align="right">
+                    <h6><a href="{% url "product_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "product_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "productInOrder_out" %}">Товары в заказе</a></th>
+                <td align="right">
+                    <h6><a href="{% url "productInOrder_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "productInOrder_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+        </table>
+
+
+        <table class="table table-light border" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th colspan="2">Все таблицы</th>
+            </tr>
+            </thead>
+            <tr>
+                <th><a href="{% url "customer_out" %}">Покупатели</a></th>
+                <td align="right">
+                    <h6><a href="{% url "customer_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "customer_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "address_out" %}">Адреса</a></th>
+                <td align="right">
+                    <h6><a href="{% url "address_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "address_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "bank_out" %}">Банки</a></th>
+                <td align="right">
+                    <h6><a href="{% url "bank_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "bank_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "delivery_out" %}">Доставки</a></th>
+                <td align="right">
+                    <h6><a href="{% url "delivery_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "delivery_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "order_out" %}">Заказы</a></th>
+                <td align="right">
+                    <h6><a href="{% url "order_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "order_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "category_out" %}">Категории</a></th>
+                <td align="right">
+                    <h6><a href="{% url "category_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "category_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "city_out" %}">Населённые пункты</a></th>
+                <td align="right">
+                    <h6><a href="{% url "city_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "city_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "organization_out" %}">Организации</a></th>
+                <td align="right">
+                    <h6><a href="{% url "organization_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "organization_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "payment_out" %}">Платежи</a></th>
+                <td align="right">
+                    <h6><a href="{% url "payment_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "payment_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "region_out" %}">Регионы</a></th>
+                <td align="right">
+                    <h6><a href="{% url "region_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "region_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "country_out" %}">Страны</a></th>
+                <td align="right">
+                    <h6><a href="{% url "country_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "country_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "product_out" %}">Товары</a></th>
+                <td align="right">
+                    <h6><a href="{% url "product_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "product_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "productInOrder_out" %}">Товары в заказах</a></th>
+                <td align="right">
+                    <h6><a href="{% url "productInOrder_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "productInOrder_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "paymentType_out" %}">Типы оплаты</a></th>
+                <td align="right">
+                    <h6><a href="{% url "paymentType_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "paymentType_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "deliveryType_out" %}">Типы доставки</a></th>
+                <td align="right">
+                    <h6><a href="{% url "deliveryType_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "deliveryType_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "manufacturer_out" %}">Производители</a></th>
+                <td align="right">
+                    <h6><a href="{% url "manufacturer_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "manufacturer_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "provider_out" %}">Поставщики</a></th>
+                <td align="right">
+                    <h6><a href="{% url "provider_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "provider_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+            <tr>
+                <th><a href="{% url "store_out" %}">Магазины</a></th>
+                <td align="right">
+                    <h6><a href="{% url "store_add" %}"><i class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "store_out" %}"><i class="fas fa-pencil-alt home-icon"></i> Change</a>
+                    </h6>
+                </td>
+            </tr>
+        </table>
+
+
+    </div>
+{% endblock %}

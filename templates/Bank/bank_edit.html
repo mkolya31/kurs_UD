@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать Банк{% endblock title %}
+
+{% block content %}
+
+        <div class="header">
+        <div class="header-container">
+            <div class="row">
+                <a href="{% url "home_page" %}"><h6 class="h6-header">Home</h6></a><h6 class="h6-header">/</h6>
+                <a href="{% url "bank_out" %}"><h6 class="h6-header">Banks</h6></a><h6 class="h6-header">/ Edit</h6>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1>Редактировать: {{ bank }}</h1>
+    </div>
+
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <td>Название</td>
+                    <td>{{ form.bank_name }}</td>
+                </tr>
+                <tr>
+                    <td>БИК</td>
+                    <td>{{ form.bank_BIK}}</td>
+                </tr>
+                <tr>
+                    <td>Корр. счёт</td>
+                    <td class="dj-form">{{ form.bank_corr_account }}</td>
+                </tr>
+                <tr>
+                    <td>Создан</td>
+                    <td>{{ bank.updated }}</td>
+                </tr>
+                <tr>
+                    <td>Обновлён</td>
+                    <td>{{ bank.updated }}</td>
+                </tr>
+            </table>
+            <p>
+            <div class="row">
+                <div class="col"><a href="{% url "bank_delete" bank.id %}"><input type="button"
+                                                                                        class="btn btn-danger"
+                                                                                        value="Удалить"></a></div>
+                <div class="col" align="right"><a href="../../../bank"><input type="button" class="btn btn-secondary"
+                                                                                 value="Отменить"></a>
+                    <a href="../../../bank"><input type="submit" class="btn btn-success"></a></div>
+            </div>
+            </p>
+        </form>
+    </div>
+{% endblock content %}
