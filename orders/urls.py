@@ -1,9 +1,15 @@
 from django.conf.urls import url
+from django.contrib.auth.views import login, logout
 
 from . import views
 
 urlpatterns = [
     url(r'^$', views.home_page, name='home_page'),
+    url(r'^accounts/login/$', login,
+        {'template_name': '../templates/login_auth/login.html', 'redirect_authenticated_user': '../',
+         'redirect_field_name': '../'}, name='login'),
+    url(r'^logout/$', logout, {'template_name': '../templates/login_auth/logout.html'}, name='logout'),
+    url(r'^accounts/profile/$', views.view_profile, name='profile'),
     # CUSTOMER
     url(r'^customer$', views.customer_out, name='customer_out'),
     url(r'^customer/add$', views.customer_add, name='customer_add'),
@@ -69,7 +75,8 @@ urlpatterns = [
     url(r'^productInOrder$', views.productInOrder_out, name='productInOrder_out'),
     url(r'^productInOrder/add$', views.productInOrder_add, name='productInOrder_add'),
     url(r'^productInOrder/edit/(?P<productInOrder_id>[\w-]+)$', views.productInOrder_edit, name='productInOrder_edit'),
-    url(r'^productInOrder/delete/(?P<productInOrder_id>[\w-]+)$', views.productInOrder_delete, name='productInOrder_delete'),
+    url(r'^productInOrder/delete/(?P<productInOrder_id>[\w-]+)$', views.productInOrder_delete,
+        name='productInOrder_delete'),
     # PAYMENT_TYPE
     url(r'^paymentType$', views.paymentType_out, name='paymentType_out'),
     url(r'^paymentType/add$', views.paymentType_add, name='paymentType_add'),

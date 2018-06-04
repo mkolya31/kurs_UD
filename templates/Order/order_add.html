@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block title %}Добавить заказ{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "order_out" %}">Order</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Add</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h1>Добавить заказ</h1>
+    </div>
+
+    <div class="container">
+
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <th>Магазин</th>
+                    <td>{{ form.store }}</td>
+                </tr>
+                <tr>
+                    <th>Пользователь</th>
+                    <td>{{ form.customer }}<a href="{% url "customer_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "customer_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                            Change</a></td>
+                </tr>
+                <tr>
+                    <th>Комментарий</th>
+                    <td>{{ form.comments }}</td>
+                </tr>
+                <tr>
+                    <th>Адрес</th>
+                    <td>{{ form.address }}<a href="{% url "address_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "address_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                            Change</a></td>
+                </tr>
+            </table>
+            <div class="row">
+                <div class="col" align="right"><p>
+                    <a href="../../../order"><input type="button" class="btn btn-secondary"
+                                                    value="Discard changes"></a>
+                    <a href="../../../order"><input type="submit" class="btn btn-success" value="Save and add another"
+                                                    name="Add another"></a>
+                    <a href="../../../order"><input type="submit" class="btn btn-success" name="Add"></a>
+                </p></div>
+            </div>
+        </form>
+    </div>
+
+{% endblock content %}

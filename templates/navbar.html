@@ -35,11 +35,24 @@
                     <a class="dropdown-item" href="{% url "manufacturer_out" %}">Производители</a>
                     <a class="dropdown-item" href="{% url "provider_out" %}">Поставщики</a>
                     <a class="dropdown-item" href="{% url "product_out" %}">Товары</a>
+                    <a class="dropdown-item" href="{% url "productInOrder_out" %}">Товары в заказе</a>
                 </div>
             </li>
         </ul>
         <form class="form-inline my-2 my-md-0">
-            <input class="form-control" type="text" placeholder="Search">
+            <ul class="nav navbar-nav navbar-right">
+                {% if username %}
+                    <li class="nav-item nav-top-item">
+                        <a class="nav-link nav-top-link" href="{% url "logout" %}">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>Выйти ({{ username }})</a>
+                    </li>
+                {% else %}
+                    <li class="nav-item nav-top-item">
+                    <a class="nav-link nav-top-link" href="{% url "login" %}">
+                        <i class="fa fa-sign-in" aria-hidden="true"></i> Войти</a>
+                    </li>
+                {% endif %}
+            </ul>
         </form>
     </div>
 </nav>

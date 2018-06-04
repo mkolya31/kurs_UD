@@ -18,7 +18,7 @@
         <div class="container">
             <table>
                 <tr>
-                    <td><h1 align="right">Удалить: {{ store }}?</h1></td>
+                    <td><h1 align="right">Удалить: {{ product }}?</h1></td>
                     <td class="delete-button-td">
                         <input type="submit" class="btn btn-danger btn-delete" value="Yes" name="Yes">
                         <input type="submit" class="btn btn-light btn-delete" value="No" name="No">
@@ -52,31 +52,19 @@
             </tr>
             <tr>
                 <th>Магазин</th>
-                <td>{{ product.product_store }}<a href="{% url "store_add" %}" target="_blank"><i
-                        class="fas fa-plus home-icon"></i> Add</a>
-                    <a href="{% url "store_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
-                        Change</a></td>
+                <td>{{ product.product_store }}</td>
             </tr>
             <tr>
                 <th>Производитель</th>
-                <td>{{ product.product_manufacturer }}<a href="{% url "manufacturer_add" %}" target="_blank"><i
-                        class="fas fa-plus home-icon"></i> Add</a>
-                    <a href="{% url "manufacturer_out" %}" target="_blank"><i
-                            class="fas fa-pencil-alt home-icon"></i> Change</a></td>
+                <td>{{ product.product_manufacturer }}</td>
             </tr>
             <tr>
                 <th>Категория</th>
-                <td>{{ product.product_category }}<a href="{% url "category_add" %}" target="_blank"><i
-                        class="fas fa-plus home-icon"></i> Add</a>
-                    <a href="{% url "category_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
-                        Change</a></td>
+                <td>{{ product.product_category }}</td>
             </tr>
             <tr>
                 <th>Поставщик</th>
-                <td>{{ product.product_provider }}<a href="{% url "provider_add" %}" target="_blank"><i
-                        class="fas fa-plus home-icon"></i> Add</a>
-                    <a href="{% url "provider_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
-                        Change</a></td>
+                <td>{{ product.product_provider }}</td>
             </tr>
             <tr>
                 <th>Создан</th>

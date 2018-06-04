@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Удалить заказ{% endblock %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "store_out" %}">Order</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Delete</li>
+        </ol>
+    </nav>
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <table>
+                <tr>
+                    <td><h1 align="right">Удалить: {{ order }}?</h1></td>
+                    <td class="delete-button-td">
+                        <input type="submit" class="btn btn-danger btn-delete" value="Yes" name="Yes">
+                        <input type="submit" class="btn btn-light btn-delete" value="No" name="No">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <div class="container del-container">
+            <table class="table table-light border" align="center">
+                <tr>
+                    <th>Магазин</th>
+                    <td>{{ order.store }}</td>
+                </tr>
+                <tr>
+                    <th>Сумма заказа</th>
+                    <td>{{ order.total_price }}</td>
+                </tr>
+                <tr>
+                    <th>Пользователь</th>
+                    <td>{{ order.customer }}</td>
+                </tr>
+                <tr>
+                    <th>Статус</th>
+                    <td>{{ order.order_status }}</td>
+                </tr>
+                <tr>
+                    <th>Комментарий</th>
+                    <td>{{ order.comments }}</td>
+                </tr>
+                <tr>
+                    <th>Адрес</th>
+                    <td>{{ order.address }}</td>
+                </tr>
+                <tr>
+                    <th>Создан</th>
+                    <td>{{ order.created }}</td>
+                </tr>
+                <tr>
+                    <th>Обновлён</th>
+                    <td>{{ order.updated }}</td>
+                </tr>
+            </table>
+    </div>
+
+{% endblock %}

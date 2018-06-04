@@ -1,0 +1,66 @@
+{% extends "base.html" %}
+
+{% block title %}Удалить товар из заказа{% endblock %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "store_out" %}">ProductInOrder</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Delete</li>
+        </ol>
+    </nav>
+
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <div class="container">
+            <table>
+                <tr>
+                    <td><h1 align="right">Удалить: {{ productInOrder }}?</h1></td>
+                    <td class="delete-button-td">
+                        <input type="submit" class="btn btn-danger btn-delete" value="Yes" name="Yes">
+                        <input type="submit" class="btn btn-light btn-delete" value="No" name="No">
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+
+    <div class="container del-container">
+        <table class="table table-light border" align="center">
+            <tr>
+                <th>Заказ</th>
+                <td>{{ productInOrder.order }}<a href="{% url "order_add" %}" target="_blank"><i
+                        class="fas fa-plus home-icon"></i> Add</a>
+                    <a href="{% url "order_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                        Change</a></td>
+            </tr>
+            <tr>
+                <th>Товар</th>
+                <td>{{ productInOrder.product }}<a href="{% url "product_add" %}" target="_blank"><i
+                        class="fas fa-plus home-icon"></i> Add</a>
+                    <a href="{% url "product_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                        Change</a></td>
+            </tr>
+            <tr>
+                <th>Стоимость</th>
+                <td>{{ productInOrder.product.product_price }} / {{ productInOrder.product.product_unit }} </td>
+            </tr>
+            <tr>
+                <th>Количество</th>
+                <td>{{ productInOrder.number }}</td>
+            </tr>
+            <tr>
+                <th>Создан</th>
+                <td>{{ productInOrder.created }}</td>
+            </tr>
+            <tr>
+                <th>Обновлён</th>
+                <td>{{ productInOrder.updated }}</td>
+            </tr>
+        </table>
+    </div>
+
+{% endblock %}

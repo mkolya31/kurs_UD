@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать товар в заказе{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "productInOrder_out" %}">ProductInOrder</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h1>Редактировать: {{ productInOrder }}</h1>
+    </div>
+
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <th>Заказ</th>
+                    <td>{{ form.order }}<a href="{% url "order_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "order_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                            Change</a></td>
+                </tr>
+                <tr>
+                    <th>Товар</th>
+                    <td>{{ form.product }}<a href="{% url "product_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "product_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                            Change</a></td>
+                </tr>
+                <tr>
+                    <th>Стоимость</th>
+                    <td>{{ productInOrder.product.product_price }} / {{ productInOrder.product.product_unit }} </td>
+                </tr>
+                <tr>
+                    <th>Количество</th>
+                    <td>{{ form.number }}</td>
+                </tr>
+            </table>
+            <div class="row">
+                <div class="col"><a href="{% url "productInOrder_delete" productInOrder.id %}"><input type="button"
+                                                                                                      class="btn btn-danger"
+                                                                                                      value="Удалить"></a>
+                </div>
+                <div class="col" align="right"><a href="../../../productInOrder"><input type="button"
+                                                                                        class="btn btn-light"
+                                                                                        value="Отменить"></a>
+                    <a href="../../../productInOrder"><input type="submit" class="btn btn-success"></a></div>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

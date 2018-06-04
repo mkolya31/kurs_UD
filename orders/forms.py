@@ -31,14 +31,24 @@ class DeliveryForm(ModelForm):
                   "delivery_status"]
 
 
-class OrderForm(ModelForm):
+class NewOrderForm(ModelForm):
     customer = forms.ModelChoiceField(queryset=Customer.objects.filter(is_active=True))
     store = forms.ModelChoiceField(queryset=Store.objects.filter(is_active=True))
     address = forms.ModelChoiceField(queryset=Address.objects.filter(is_active=True))
 
     class Meta:
         model = Order
-        fields = ["customer", "store", "total_price", "order_status", "comments", "address"]
+        fields = ["customer", "store", "comments", "address"]
+
+
+class EditOrderForm(ModelForm):
+    customer = forms.ModelChoiceField(queryset=Customer.objects.filter(is_active=True))
+    store = forms.ModelChoiceField(queryset=Store.objects.filter(is_active=True))
+    address = forms.ModelChoiceField(queryset=Address.objects.filter(is_active=True))
+
+    class Meta:
+        model = Order
+        fields = ["customer", "store", "order_status", "comments", "address"]
 
 
 class CategoryForm(ModelForm):
@@ -103,7 +113,7 @@ class ProductInOrderForm(ModelForm):
 
     class Meta:
         model = ProductInOrder
-        fields = ["order", "product", "number", "price_per_item", "total_price"]
+        fields = ["order", "product", "number"]
 
 
 class AddressForm(ModelForm):

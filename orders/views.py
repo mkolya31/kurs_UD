@@ -1,25 +1,39 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
-from .models import *
 from .forms import *
-from django.forms import modelformset_factory
+from django.contrib import auth
+from django.contrib.auth.decorators import login_required
 
 
+@login_required
 def home_page(request):
     return render(request, "home.html", locals())
 
 
+@login_required
+def view_profile(request):
+    username = auth.get_user(request).username
+    args = {
+        'user': request.user
+    }
+
+    return render(request, 'login_auth/view_profile.html', locals())
+
+
 # CUSTOMER
+@login_required
 def customer_out(request):
     client_list = Customer.objects.filter(is_active=True)
     return render(request, "Customer/customerout.html", locals())
 
 
+@login_required
 def customer_view(request, customer_id):
     customer = Customer.objects.get(id=customer_id)
     return render(request, "Customer/customerview.html", locals())
 
 
+@login_required
 def customer_add(request):
     form = CustomersForm(request.POST or None)
     if request.method == "POST":
@@ -31,6 +45,7 @@ def customer_add(request):
     return render(request, "Customer/customeradd.html", locals())
 
 
+@login_required
 def customer_edit(request, customer_id):
     customer = Customer.objects.get(id=customer_id)
     form = CustomersForm(instance=customer)
@@ -44,13 +59,14 @@ def customer_edit(request, customer_id):
     return render(request, "Customer/customeredit.html", locals())
 
 
+@login_required
 def customer_delete(request, customer_id):
     customer = Customer.objects.get(id=customer_id)
     if request.method == "POST":
         print(request.POST)
         if 'Yes' in request.POST.keys() and request.POST['Yes']:
             customer.is_active = False
-            customer.save
+            customer.save()
             return redirect("../../../customer")
         else:
             return redirect("../../../customer")
@@ -58,12 +74,14 @@ def customer_delete(request, customer_id):
 
 
 # ADDRESS
+@login_required
 def address_out(request):
     address_list = Address.objects.filter(is_active=True)
     address_verbose = Address._meta.verbose_name_plural
     return render(request, "Address/address_out.html", locals())
 
 
+@login_required
 def address_add(request):
     form = AddressForm(request.POST or None)
     if request.method == "POST":
@@ -75,6 +93,7 @@ def address_add(request):
     return render(request, "Address/address_add.html", locals())
 
 
+@login_required
 def address_edit(request, address_id):
     address = Address.objects.get(id=address_id)
     form = AddressForm(instance=address)
@@ -88,6 +107,7 @@ def address_edit(request, address_id):
     return render(request, "Address/address_edit.html", locals())
 
 
+@login_required
 def address_delete(request, address_id):
     address = Address.objects.get(id=address_id)
     if request.method == "POST":
@@ -102,12 +122,14 @@ def address_delete(request, address_id):
 
 
 # BANKS
+@login_required
 def bank_out(request):
     bank_list = Bank.objects.filter(is_active=True)
     bank_verbose = Bank._meta.verbose_name_plural
     return render(request, "Bank/bank_out.html", locals())
 
 
+@login_required
 def bank_add(request):
     form = BankForm(request.POST or None)
     if request.method == "POST":
@@ -119,6 +141,7 @@ def bank_add(request):
     return render(request, "Bank/bank_add.html", locals())
 
 
+@login_required
 def bank_edit(request, bank_id):
     bank = Bank.objects.get(id=bank_id)
     form = BankForm(instance=bank)
@@ -132,6 +155,7 @@ def bank_edit(request, bank_id):
     return render(request, "Bank/bank_edit.html", locals())
 
 
+@login_required
 def bank_delete(request, bank_id):
     bank = Bank.objects.get(id=bank_id)
     if request.method == "POST":
@@ -146,12 +170,14 @@ def bank_delete(request, bank_id):
 
 
 # DELIVERY
+@login_required
 def delivery_out(request):
     delivery_list = Delivery.objects.filter(is_active=True)
     delivery_verbose = Delivery._meta.verbose_name_plural
     return render(request, "Delivery/delivery_out.html", locals())
 
 
+@login_required
 def delivery_add(request):
     form = DeliveryForm(request.POST or None)
     if request.method == "POST":
@@ -163,6 +189,7 @@ def delivery_add(request):
     return render(request, "Delivery/delivery_add.html", locals())
 
 
+@login_required
 def delivery_edit(request, delivery_id):
     delivery = Delivery.objects.get(id=delivery_id)
     form = DeliveryForm(instance=delivery)
@@ -176,6 +203,7 @@ def delivery_edit(request, delivery_id):
     return render(request, "Delivery/delivery_edit.html", locals())
 
 
+@login_required
 def delivery_delete(request, delivery_id):
     delivery = Delivery.objects.get(id=delivery_id)
     if request.method == "POST":
@@ -190,14 +218,16 @@ def delivery_delete(request, delivery_id):
 
 
 # ORDERS
+@login_required
 def order_out(request):
     order_list = Order.objects.filter(is_active=True)
     order_verbose = Order._meta.verbose_name_plural
     return render(request, "Order/order_out.html", locals())
 
 
+@login_required
 def order_add(request):
-    form = OrderForm(request.POST or None)
+    form = NewOrderForm(request.POST or None)
     if request.method == "POST":
         if form.is_valid():
             form.save()
@@ -207,11 +237,12 @@ def order_add(request):
     return render(request, "Order/order_add.html", locals())
 
 
+@login_required
 def order_edit(request, order_id):
     order = Order.objects.get(id=order_id)
-    form = OrderForm(instance=order)
+    form = EditOrderForm(instance=order)
     if request.method == "POST":
-        form = OrderForm(request.POST, instance=order)
+        form = EditOrderForm(request.POST, instance=order)
         if form.is_valid():
             form.save()
             return redirect("../../../order")
@@ -220,6 +251,7 @@ def order_edit(request, order_id):
     return render(request, "Order/order_edit.html", locals())
 
 
+@login_required
 def order_delete(request, order_id):
     order = Order.objects.get(id=order_id)
     if request.method == "POST":
@@ -234,12 +266,14 @@ def order_delete(request, order_id):
 
 
 # CATEGORIES
+@login_required
 def category_out(request):
     category_list = Category.objects.filter(is_active=True)
     category_verbose = Category._meta.verbose_name_plural
     return render(request, "Category/category_out.html", locals())
 
 
+@login_required
 def category_add(request):
     form = CategoryForm(request.POST or None)
     if request.method == "POST":
@@ -251,6 +285,7 @@ def category_add(request):
     return render(request, "Category/category_add.html", locals())
 
 
+@login_required
 def category_edit(request, category_id):
     category = Category.objects.get(id=category_id)
     form = CategoryForm(instance=category)
@@ -264,6 +299,7 @@ def category_edit(request, category_id):
     return render(request, "Category/category_edit.html", locals())
 
 
+@login_required
 def category_delete(request, category_id):
     category = Category.objects.get(id=category_id)
     if request.method == "POST":
@@ -278,12 +314,14 @@ def category_delete(request, category_id):
 
 
 # CITY
+@login_required
 def city_out(request):
     city_list = AddressCity.objects.filter(is_active=True)
     city_verbose = AddressCity._meta.verbose_name_plural
     return render(request, "City/city_out.html", locals())
 
 
+@login_required
 def city_add(request):
     form = CityForm(request.POST or None)
     if request.method == "POST":
@@ -295,6 +333,7 @@ def city_add(request):
     return render(request, "City/city_add.html", locals())
 
 
+@login_required
 def city_edit(request, city_id):
     city = AddressCity.objects.get(id=city_id)
     form = CityForm(instance=city)
@@ -308,6 +347,7 @@ def city_edit(request, city_id):
     return render(request, "City/city_edit.html", locals())
 
 
+@login_required
 def city_delete(request, city_id):
     city = AddressCity.objects.get(id=city_id)
     if request.method == "POST":
@@ -322,12 +362,14 @@ def city_delete(request, city_id):
 
 
 # ORGANIZATION
+@login_required
 def organization_out(request):
     organization_list = Organization.objects.filter(is_active=True)
     organization_verbose = Organization._meta.verbose_name_plural
     return render(request, "Organization/organization_out.html", locals())
 
 
+@login_required
 def organization_add(request):
     form = OrganizationForm(request.POST or None)
     if request.method == "POST":
@@ -339,6 +381,7 @@ def organization_add(request):
     return render(request, "Organization/organization_add.html", locals())
 
 
+@login_required
 def organization_edit(request, organization_id):
     organization = Organization.objects.get(id=organization_id)
     form = OrganizationForm(instance=organization)
@@ -352,6 +395,7 @@ def organization_edit(request, organization_id):
     return render(request, "Organization/organization_edit.html", locals())
 
 
+@login_required
 def organization_delete(request, organization_id):
     organization = Organization.objects.get(id=organization_id)
     if request.method == "POST":
@@ -366,12 +410,14 @@ def organization_delete(request, organization_id):
 
 
 # PAYMENT
+@login_required
 def payment_out(request):
     payment_list = Payment.objects.filter(is_active=True)
     payment_verbose = Payment._meta.verbose_name_plural
     return render(request, "Payment/payment_out.html", locals())
 
 
+@login_required
 def payment_add(request):
     form = PaymentForm(request.POST or None)
     if request.method == "POST":
@@ -383,6 +429,7 @@ def payment_add(request):
     return render(request, "Payment/payment_add.html", locals())
 
 
+@login_required
 def payment_edit(request, payment_id):
     payment = Payment.objects.get(id=payment_id)
     form = PaymentForm(instance=payment)
@@ -396,6 +443,7 @@ def payment_edit(request, payment_id):
     return render(request, "Payment/payment_edit.html", locals())
 
 
+@login_required
 def payment_delete(request, payment_id):
     payment = Payment.objects.get(id=payment_id)
     if request.method == "POST":
@@ -410,12 +458,14 @@ def payment_delete(request, payment_id):
 
 
 # REGION
+@login_required
 def region_out(request):
     region_list = AddressRegion.objects.filter(is_active=True)
     region_verbose = AddressRegion._meta.verbose_name_plural
     return render(request, "Region/region_out.html", locals())
 
 
+@login_required
 def region_add(request):
     form = RegionForm(request.POST or None)
     if request.method == "POST":
@@ -427,6 +477,7 @@ def region_add(request):
     return render(request, "Region/region_add.html", locals())
 
 
+@login_required
 def region_edit(request, region_id):
     region = AddressRegion.objects.get(id=region_id)
     form = RegionForm(instance=region)
@@ -440,6 +491,7 @@ def region_edit(request, region_id):
     return render(request, "Region/region_edit.html", locals())
 
 
+@login_required
 def region_delete(request, region_id):
     region = AddressRegion.objects.get(id=region_id)
     if request.method == "POST":
@@ -454,12 +506,14 @@ def region_delete(request, region_id):
 
 
 # COUNTRY
+@login_required
 def country_out(request):
     country_list = AddressCountry.objects.filter(is_active=True)
     country_verbose = AddressCountry._meta.verbose_name_plural
     return render(request, "Country/country_out.html", locals())
 
 
+@login_required
 def country_add(request):
     form = CountryForm(request.POST or None)
     if request.method == "POST":
@@ -471,6 +525,7 @@ def country_add(request):
     return render(request, "Country/country_add.html", locals())
 
 
+@login_required
 def country_edit(request, country_id):
     country = AddressCountry.objects.get(id=country_id)
     form = CountryForm(instance=country)
@@ -484,6 +539,7 @@ def country_edit(request, country_id):
     return render(request, "Country/country_edit.html", locals())
 
 
+@login_required
 def country_delete(request, country_id):
     country = AddressCountry.objects.get(id=country_id)
     if request.method == "POST":
@@ -498,12 +554,14 @@ def country_delete(request, country_id):
 
 
 # PRODUCTS
+@login_required
 def product_out(request):
     product_list = Product.objects.filter(is_active=True)
     product_verbose = Product._meta.verbose_name_plural
     return render(request, "Product/product_out.html", locals())
 
 
+@login_required
 def product_add(request):
     form = ProductForm(request.POST or None)
     flag = False
@@ -520,6 +578,7 @@ def product_add(request):
     return render(request, "Product/product_add.html", locals())
 
 
+@login_required
 def product_edit(request, product_id):
     product = Product.objects.get(id=product_id)
     form = ProductForm(instance=product)
@@ -533,6 +592,7 @@ def product_edit(request, product_id):
     return render(request, "Product/product_edit.html", locals())
 
 
+@login_required
 def product_delete(request, product_id):
     product = Product.objects.get(id=product_id)
     if request.method == "POST":
@@ -547,12 +607,14 @@ def product_delete(request, product_id):
 
 
 # PRODUCT_IN_ORDER
+@login_required
 def productInOrder_out(request):
     productInOrder_list = ProductInOrder.objects.filter(is_active=True)
     productInOrder_verbose = ProductInOrder._meta.verbose_name_plural
     return render(request, "ProductInOrder/productInOrder_out.html", locals())
 
 
+@login_required
 def productInOrder_add(request):
     form = ProductInOrderForm(request.POST or None)
     if request.method == "POST":
@@ -564,6 +626,7 @@ def productInOrder_add(request):
     return render(request, "ProductInOrder/productInOrder_add.html", locals())
 
 
+@login_required
 def productInOrder_edit(request, productInOrder_id):
     productInOrder = ProductInOrder.objects.get(id=productInOrder_id)
     form = ProductInOrderForm(instance=productInOrder)
@@ -577,6 +640,7 @@ def productInOrder_edit(request, productInOrder_id):
     return render(request, "ProductInOrder/productInOrder_edit.html", locals())
 
 
+@login_required
 def productInOrder_delete(request, productInOrder_id):
     productInOrder = ProductInOrder.objects.get(id=productInOrder_id)
     if request.method == "POST":
@@ -591,12 +655,14 @@ def productInOrder_delete(request, productInOrder_id):
 
 
 # PaymentType
+@login_required
 def paymentType_out(request):
     paymentType_list = PaymentType.objects.filter(is_active=True)
     paymentType_verbose = PaymentType._meta.verbose_name_plural
     return render(request, "PaymentType/paymentType_out.html", locals())
 
 
+@login_required
 def paymentType_add(request):
     form = PaymentTypeForm(request.POST or None)
     if request.method == "POST":
@@ -608,6 +674,7 @@ def paymentType_add(request):
     return render(request, "PaymentType/paymentType_add.html", locals())
 
 
+@login_required
 def paymentType_edit(request, paymentType_id):
     paymentType = PaymentType.objects.get(id=paymentType_id)
     form = PaymentTypeForm(instance=paymentType)
@@ -621,6 +688,7 @@ def paymentType_edit(request, paymentType_id):
     return render(request, "PaymentType/paymentType_edit.html", locals())
 
 
+@login_required
 def paymentType_delete(request, paymentType_id):
     paymentType = PaymentType.objects.get(id=paymentType_id)
     if request.method == "POST":
@@ -635,12 +703,14 @@ def paymentType_delete(request, paymentType_id):
 
 
 # DeliveryType
+@login_required
 def deliveryType_out(request):
     deliveryType_list = DeliveryType.objects.filter(is_active=True)
     deliveryType_verbose = DeliveryType._meta.verbose_name_plural
     return render(request, "DeliveryType/deliveryType_out.html", locals())
 
 
+@login_required
 def deliveryType_add(request):
     form = DeliveryTypeForm(request.POST or None)
     if request.method == "POST":
@@ -652,6 +722,7 @@ def deliveryType_add(request):
     return render(request, "DeliveryType/deliveryType_add.html", locals())
 
 
+@login_required
 def deliveryType_edit(request, deliveryType_id):
     deliveryType = DeliveryType.objects.get(id=deliveryType_id)
     form = DeliveryTypeForm(instance=deliveryType)
@@ -665,6 +736,7 @@ def deliveryType_edit(request, deliveryType_id):
     return render(request, "DeliveryType/deliveryType_edit.html", locals())
 
 
+@login_required
 def deliveryType_delete(request, deliveryType_id):
     deliveryType = DeliveryType.objects.get(id=deliveryType_id)
     if request.method == "POST":
@@ -679,12 +751,14 @@ def deliveryType_delete(request, deliveryType_id):
 
 
 # MANUFACTURER
+@login_required
 def manufacturer_out(request):
     manufacturer_list = Manufacturer.objects.filter(is_active=True)
     manufacturer_verbose = Manufacturer._meta.verbose_name_plural
     return render(request, "Manufacturer/manufacturer_out.html", locals())
 
 
+@login_required
 def manufacturer_add(request):
     form = ManufacturerForm(request.POST or None)
     if request.method == "POST":
@@ -696,6 +770,7 @@ def manufacturer_add(request):
     return render(request, "Manufacturer/manufacturer_add.html", locals())
 
 
+@login_required
 def manufacturer_edit(request, manufacturer_id):
     manufacturer = Manufacturer.objects.get(id=manufacturer_id)
     form = ManufacturerForm(instance=manufacturer)
@@ -709,6 +784,7 @@ def manufacturer_edit(request, manufacturer_id):
     return render(request, "Manufacturer/manufacturer_edit.html", locals())
 
 
+@login_required
 def manufacturer_delete(request, manufacturer_id):
     manufacturer = Manufacturer.objects.get(id=manufacturer_id)
     if request.method == "POST":
@@ -723,12 +799,14 @@ def manufacturer_delete(request, manufacturer_id):
 
 
 # PROVIDER
+@login_required
 def provider_out(request):
     provider_list = Provider.objects.filter(is_active=True)
     provider_verbose = Provider._meta.verbose_name_plural
     return render(request, "Provider/provider_out.html", locals())
 
 
+@login_required
 def provider_add(request):
     form = ProviderForm(request.POST or None)
     if request.method == "POST":
@@ -740,6 +818,7 @@ def provider_add(request):
     return render(request, "Provider/provider_add.html", locals())
 
 
+@login_required
 def provider_edit(request, provider_id):
     provider = Provider.objects.get(id=provider_id)
     form = ProviderForm(instance=provider)
@@ -753,6 +832,7 @@ def provider_edit(request, provider_id):
     return render(request, "Provider/provider_edit.html", locals())
 
 
+@login_required
 def provider_delete(request, provider_id):
     provider = Provider.objects.get(id=provider_id)
     if request.method == "POST":
@@ -767,12 +847,14 @@ def provider_delete(request, provider_id):
 
 
 # STORE
+@login_required
 def store_out(request):
     store_list = Store.objects.filter(is_active=True)
     store_verbose = Store._meta.verbose_name_plural
     return render(request, "Store/store_out.html", locals())
 
 
+@login_required
 def store_add(request):
     form = StoreForm(request.POST or None)
     if request.method == "POST":
@@ -784,6 +866,7 @@ def store_add(request):
     return render(request, "Store/store_add.html", locals())
 
 
+@login_required
 def store_edit(request, store_id):
     store = Store.objects.get(id=store_id)
     form = StoreForm(instance=store)
@@ -797,6 +880,7 @@ def store_edit(request, store_id):
     return render(request, "Store/store_edit.html", locals())
 
 
+@login_required
 def store_delete(request, store_id):
     store = Store.objects.get(id=store_id)
     if request.method == "POST":

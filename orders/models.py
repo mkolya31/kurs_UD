@@ -358,10 +358,10 @@ class Customer(models.Model):
 
 class Product(models.Model):
     NONE = 'NON'
-    SQUARE_METER = 'SQM'
-    RUNNING_METER = 'RNM'
-    UNIT = 'UNI'
-    PACKING = 'PAC'
+    SQUARE_METER = 'м²'
+    RUNNING_METER = 'м. пог.'
+    UNIT = 'Шт.'
+    PACKING = 'Уп.'
     PRODUCT_UNIT = (
         (NONE, 'Не указано'),
         (SQUARE_METER, 'За м²'),

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать заказ{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "order_out" %}">Order</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h1>Редактировать: {{ order }}</h1>
+    </div>
+
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <th>Магазин</th>
+                    <td>{{ form.store }}</td>
+                </tr>
+                <tr>
+                    <th>Сумма заказа</th>
+                    <td>{{ order.total_price }}</td>
+                </tr>
+                <tr>
+                    <th>Пользователь</th>
+                    <td>{{ form.customer }}<a href="{% url "customer_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "customer_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                            Change</a></td>
+                </tr>
+                <tr>
+                    <th>Статус</th>
+                    <td>{{ form.order_status }}</td>
+                </tr>
+                <tr>
+                    <th>Комментарий</th>
+                    <td>{{ form.comments }}</td>
+                </tr>
+                <tr>
+                    <th>Адрес</th>
+                    <td>{{ form.address }}<a href="{% url "address_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "address_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                            Change</a></td>
+                </tr>
+                <tr>
+                    <th>Создан</th>
+                    <td>{{ order.created }}</td>
+                </tr>
+                <tr>
+                    <th>Обновлён</th>
+                    <td>{{ order.updated }}</td>
+                </tr>
+            </table>
+            <div class="row">
+                <div class="col"><a href="{% url "order_delete" order.id %}"><input type="button"
+                                                                                    class="btn btn-danger"
+                                                                                    value="Удалить"></a>
+                </div>
+                <div class="col" align="right"><a href="../../../order"><input type="button"
+                                                                               class="btn btn-light"
+                                                                               value="Отменить"></a>
+                    <a href="../../../order"><input type="submit" class="btn btn-success"></a></div>
+            </div>
+        </form>
+    </div>
+{% endblock content %}
