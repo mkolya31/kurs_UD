@@ -5,14 +5,14 @@
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
-    <li class="breadcrumb-item active">Address</li>
+    <li class="breadcrumb-item active" aria-current="page"><a href="{% url "address_out" %}">Address</a></li>
   </ol>
 </nav>
 
     <div class="container">
         <h1 align="center" class="h1-out">{{ address_verbose }}</h1>
     </div>
-    <div class="out-container">
+    <div class="container-fluid out-container">
         <table class="table table-light border table-hover" align="center">
             <thead class="thead-dark">
             <tr>

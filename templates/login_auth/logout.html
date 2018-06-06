@@ -2,6 +2,14 @@
 {% load static %}
 
 {% block content %}
-        <h1>Logged out</h1>
-        <h4 class="text-center align-middle">You have logged out!</h4>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="{% url "logout_out" %}">Logout</a></li>
+        </ol>
+    </nav>
+
+    <h1>Logged out</h1>
+    <h4 class="text-center align-middle">You have logged out!</h4>
 {% endblock %}

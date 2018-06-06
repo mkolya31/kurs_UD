@@ -225,6 +225,15 @@ def order_out(request):
     return render(request, "Order/order_out.html", locals())
 
 
+def order_view(request, order_id):
+    order = Order.objects.get(id=order_id)
+    order_verbose = Order._meta.verbose_name
+    products_list = ProductInOrder.objects.filter(order=order)
+    delivery_list = Delivery.objects.filter(delivery_order=order)
+    payment_list = Payment.objects.filter(payment_order=order)
+    return render(request, "Order/order_view.html", locals())
+
+
 @login_required
 def order_add(request):
     form = NewOrderForm(request.POST or None)
@@ -654,7 +663,7 @@ def productInOrder_delete(request, productInOrder_id):
     return render(request, "ProductInOrder/productInOrder_delete.html", locals())
 
 
-# PaymentType
+# PAYMENT_TYPE
 @login_required
 def paymentType_out(request):
     paymentType_list = PaymentType.objects.filter(is_active=True)
@@ -892,5 +901,53 @@ def store_delete(request, store_id):
         else:
             return redirect("../../../store")
     return render(request, "Store/store_delete.html", locals())
+
+
+# CUSTOMER_ADDRESS
+@login_required
+def customerAddress_out(request):
+    customerAddress_list = CustomerAddress.objects.filter(is_active=True)
+    customerAddress_verbose = CustomerAddress._meta.verbose_name_plural
+    return render(request, "CustomerAddress/customerAddress_out.html", locals())
+
+
+@login_required
+def customerAddress_add(request):
+    form = CustomerAddressAddForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            form.save()
+            return redirect("../../../customerAddress")
+        else:
+            return redirect("../../../customerAddress")
+    return render(request, "CustomerAddress/customerAddress_add.html", locals())
+
+
+@login_required
+def customerAddress_edit(request, customerAddress_id):
+    customerAddress = CustomerAddress.objects.get(id=customerAddress_id)
+    form = CustomerAddressEditForm(instance=customerAddress)
+    if request.method == "POST":
+        form = CustomerAddressEditForm(request.POST, instance=customerAddress)
+        if form.is_valid():
+            form.save()
+            return redirect("../../../customerAddress")
+        else:
+            return redirect("../../../customerAddress")
+    return render(request, "CustomerAddress/customerAddress_edit.html", locals())
+
+
+@login_required
+def customerAddress_delete(request, customerAddress_id):
+    customerAddress = CustomerAddress.objects.get(id=customerAddress_id)
+    if request.method == "POST":
+        print(request.POST)
+        if 'Yes' in request.POST.keys() and request.POST['Yes']:
+            customerAddress.is_active = False
+            customerAddress.save()
+            return redirect("../../../customerAddress")
+        else:
+            return redirect("../../../customerAddress")
+    return render(request, "CustomerAddress/customerAddress_delete.html", locals())
 
 # Create your views here.

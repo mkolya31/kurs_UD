@@ -25,15 +25,31 @@
                     <td>{{ form.store }}</td>
                 </tr>
                 <tr>
-                    <th>Сумма заказа</th>
-                    <td>{{ order.total_price }}</td>
-                </tr>
-                <tr>
                     <th>Пользователь</th>
                     <td>{{ form.customer }}<a href="{% url "customer_add" %}" target="_blank"><i
                             class="fas fa-plus home-icon"></i> Add</a>
                         <a href="{% url "customer_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
                             Change</a></td>
+                </tr>
+                <tr>
+                    <th>Стоимость товаров</th>
+                    <td>{{ order.total_product_price }}</td>
+                </tr>
+                <tr>
+                    <th>Сумма НДС</th>
+                    <td>{{ order.order_NDS }}</td>
+                </tr>
+                <tr>
+                    <th>Стоимость доставки</th>
+                    <td>{{ order.total_delivery_price }}</td>
+                </tr>
+                <tr>
+                    <th>Баланс</th>
+                    <td>{{ order.balance }}</td>
+                </tr>
+                <tr>
+                    <th>Итоговая стоимость</th>
+                    <td>{{ order.order_total_amount }}</td>
                 </tr>
                 <tr>
                     <th>Статус</th>
@@ -42,13 +58,6 @@
                 <tr>
                     <th>Комментарий</th>
                     <td>{{ form.comments }}</td>
-                </tr>
-                <tr>
-                    <th>Адрес</th>
-                    <td>{{ form.address }}<a href="{% url "address_add" %}" target="_blank"><i
-                            class="fas fa-plus home-icon"></i> Add</a>
-                        <a href="{% url "address_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
-                            Change</a></td>
                 </tr>
                 <tr>
                     <th>Создан</th>

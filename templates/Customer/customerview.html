@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-    <h1 align="center">{{ customer }}. Полные сведения.</h1>
+    <h1 align="center">{{ customer }} Полные сведения.</h1>
     <div class="container">
         <table class="table table-light border table-hover" align="center">
             <thead class="thead-dark">
@@ -29,10 +29,6 @@
             <tr>
                 <th>E-mail</th>
                 <td>{{ customer.c_email }}</td>
-            </tr>
-            <tr>
-                <th>Адрес</th>
-                <td>{{ customer.c_address}}</td>
             </tr>
             <tr>
                 <th>Организация</th>

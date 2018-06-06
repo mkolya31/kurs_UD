@@ -2,6 +2,14 @@
 {% load static %}
 
 {% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="{% url "login_out" %}">Login</a></li>
+        </ol>
+    </nav>
+
     <h1>Вход</h1>
     <div class="container">
         <div class="row">

@@ -36,6 +36,7 @@
                     <a class="dropdown-item" href="{% url "provider_out" %}">Поставщики</a>
                     <a class="dropdown-item" href="{% url "product_out" %}">Товары</a>
                     <a class="dropdown-item" href="{% url "productInOrder_out" %}">Товары в заказе</a>
+                    <a class="dropdown-item" href="{% url "customerAddress_out" %}">Адреса покупателей</a>
                 </div>
             </li>
         </ul>
@@ -46,10 +47,14 @@
                         <a class="nav-link nav-top-link" href="{% url "logout" %}">
                             <i class="fa fa-sign-out" aria-hidden="true"></i>Выйти ({{ username }})</a>
                     </li>
+                    <li class="nav-item nav-top-item">
+                        <a class="nav-link nav-top-link" href="admin/">
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>Admin</a>
+                    </li>
                 {% else %}
                     <li class="nav-item nav-top-item">
-                    <a class="nav-link nav-top-link" href="{% url "login" %}">
-                        <i class="fa fa-sign-in" aria-hidden="true"></i> Войти</a>
+                        <a class="nav-link nav-top-link" href="{% url "login" %}">
+                            <i class="fa fa-sign-in" aria-hidden="true"></i> Войти</a>
                     </li>
                 {% endif %}
             </ul>

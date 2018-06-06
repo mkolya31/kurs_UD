@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+
+{% block title %}Редактировать адрес покупателя{% endblock title %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "customerAddress_out" %}">Customer Address</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h1>Редактировать: {{ customerAddress }}</h1>
+    </div>
+
+    <div class="container">
+        <form action="" method="post">
+            {% csrf_token %}
+            <table class="table table-light border" align="center">
+                <tr>
+                    <th>Название</th>
+                    <td>{{ form.adr_name }}</td>
+                </tr>
+                <tr>
+                    <th>Покупатель</th>
+                    <td>{{ form.adr_customer }}<a href="{% url "customer_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "customer_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                            Change</a></td>
+                </tr>
+                <tr>
+                    <th>Адрес</th>
+                    <td>{{ form.adr_address }}<a href="{% url "address_add" %}" target="_blank"><i
+                            class="fas fa-plus home-icon"></i> Add</a>
+                        <a href="{% url "address_out" %}" target="_blank"><i class="fas fa-pencil-alt home-icon"></i>
+                            Change</a></td>
+                </tr>
+                <tr>
+                    <th>Создан</th>
+                    <td>{{ customerAddress.created }}</td>
+                </tr>
+                <tr>
+                    <th>Обновлён</th>
+                    <td>{{ customerAddress.updated }}</td>
+                </tr>
+            </table>
+            <div class="row">
+                <div class="col"><a href="{% url "customerAddress_delete" customerAddress.id %}"><input type="button"
+                                                                                        class="btn btn-danger"
+                                                                                        value="Удалить"></a>
+                </div>
+                <div class="col" align="right"><a href="../../../customerAddress"><input type="button"
+                                                                                 class="btn btn-light"
+                                                                                 value="Отменить"></a>
+                    <a href="../../../customerAddress"><input type="submit" class="btn btn-success"></a></div>
+            </div>
+        </form>
+    </div>
+{% endblock content %}

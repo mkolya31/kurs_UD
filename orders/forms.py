@@ -4,13 +4,16 @@ from django.db.models import Q
 from .models import *
 
 
+# required = False -- необязательное поле формы
+
+
 class CustomersForm(ModelForm):
     c_address = forms.ModelChoiceField(queryset=Address.objects.filter(is_active=True))
     c_organization = forms.ModelChoiceField(queryset=Organization.objects.filter(is_active=True))
 
     class Meta:
         model = Customer
-        fields = ["id", "c_firstname", "c_secondname", "c_phone", "c_email", "c_address", "c_organization",
+        fields = ["id", "c_firstname", "c_secondname", "c_phone", "c_email", "c_organization",
                   "c_comments"]
 
 
@@ -38,7 +41,7 @@ class NewOrderForm(ModelForm):
 
     class Meta:
         model = Order
-        fields = ["customer", "store", "comments", "address"]
+        fields = ["customer", "store", "comments"]
 
 
 class EditOrderForm(ModelForm):
@@ -48,7 +51,7 @@ class EditOrderForm(ModelForm):
 
     class Meta:
         model = Order
-        fields = ["customer", "store", "order_status", "comments", "address"]
+        fields = ["customer", "store", "order_status", "comments"]
 
 
 class CategoryForm(ModelForm):
@@ -124,7 +127,7 @@ class AddressForm(ModelForm):
     class Meta:
         model = Address
         fields = ["address_zip", "address_country", "address_region", "address_city", "address_street", "address_house",
-                  "address_flat"]
+                  "address_flat", "used"]
 
 
 class PaymentTypeForm(ModelForm):
@@ -162,3 +165,18 @@ class StoreForm(ModelForm):
     class Meta:
         model = Store
         fields = ["store_name", "store_org"]
+
+
+class CustomerAddressEditForm(ModelForm):
+
+    class Meta:
+        model = CustomerAddress
+        fields = ["adr_name", "adr_customer", "adr_address"]
+
+
+class CustomerAddressAddForm(ModelForm):
+    adr_address = forms.ModelChoiceField(queryset=Address.objects.filter(is_active=True, used=False))
+
+    class Meta:
+        model = CustomerAddress
+        fields = ["adr_name", "adr_customer", "adr_address"]

@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block title %}Адреса покупателей{% endblock %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page"><a href="{% url "customerAddress_out" %}">Customer Address</a></li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <h1 align="center" class="h1-out">{{ customerAddress_verbose }}</h1>
+    </div>
+
+    <div class="container-fluid out-container">
+        <table class="table table-light border table-hover" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Название</th>
+                <th>Покупатель</th>
+                <th>Адрес</th>
+                <td colspan="2" align="center">
+                    <form action="{% url "customerAddress_add" %}">
+                        <button type="submit" class="btn btn-success" title="Добавить"><i
+                                class="fas fa-plus-square"></i></button>
+                    </form>
+                </td>
+            </tr>
+            </thead>
+            {% for customerAddress in customerAddress_list %}
+                <tr>
+                    <th>{{ customerAddress.id }}</th>
+                    <td>{{ customerAddress.adr_name }}</td>
+                    <td>{{ customerAddress.adr_customer }}</td>
+                    <td>{{ customerAddress.adr_address }}</td>
+                    <td align="center"><a href="{% url "customerAddress_edit" customerAddress.id %}"><i
+                            class="fas fa-edit"
+                            title="Изменить"></i></a>
+                    </td>
+                    <td align="center"><a href="{% url "customerAddress_delete" customerAddress.id %}"><i
+                            class="far fa-trash-alt" title="Удалить"></i></a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+{% endblock %}

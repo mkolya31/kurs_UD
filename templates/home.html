@@ -1,6 +1,16 @@
 {% extends 'base.html' %}
 
+{% block title %}Главная{% endblock %}
+
 {% block content %}
+
+        <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item active" aria-current="page"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"></li>
+        </ol>
+    </nav>
+
     <div class="container home-container">
 
 

@@ -1,0 +1,280 @@
+{% extends "base.html" %}
+
+{% block title %}View order{% endblock %}
+
+{% block content %}
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="{% url "home_page" %}">Home</a></li>
+            <li class="breadcrumb-item"><a href="{% url "order_out" %}">Order</a></li>
+            <li class="breadcrumb-item active" aria-current="page">View</li>
+        </ol>
+    </nav>
+
+    <div class="container out-container">
+        <h1>{{ order }}</h1>
+        <table class="table table-light border" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th>Редактировать</th>
+                <th class="view-th">
+                    <a href="{% url "order_edit" order.id %}">Изменить <i class="fas fa-edit" title="Изменить"></i></a>
+                </th>
+            </tr>
+            </thead>
+            <tr>
+                <th>Магазин</th>
+                <td>{{ order.store }}</td>
+            </tr>
+            <tr>
+                <th>Покупатель</th>
+                <td>{{ order.customer }}</td>
+            </tr>
+            <tr>
+                <th>Стоимость товаров</th>
+                <td>{{ order.total_product_price }}</td>
+            </tr>
+            <tr>
+                <th>Сумма НДС</th>
+                <td>{{ order.order_NDS }}</td>
+            </tr>
+            <tr>
+                <th>Стоимость доставки</th>
+                <td>{{ order.total_delivery_price }}</td>
+            </tr>
+            <tr>
+                <th>Баланс</th>
+                <td>{{ order.balance }}</td>
+            </tr>
+            <tr>
+                <th>Итоговая стоимость</th>
+                <td>{{ order.order_total_amount }}</td>
+            </tr>
+            <tr>
+                <th>Статус</th>
+                <td>{{ order.order_status }}</td>
+            </tr>
+            <tr>
+                <th>Комментарий</th>
+                <td>{{ order.comments }}</td>
+            </tr>
+            <tr>
+                <th>Создан</th>
+                <td>{{ order.created }}</td>
+            </tr>
+            <tr>
+                <th>Обновлён</th>
+                <td>{{ order.updated }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="container">
+        <p class="view-collapse">
+            <a class="btn btn-primary btn-view" data-toggle="collapse" href="#Customer" role="button"
+               aria-expanded="false"
+               aria-controls="Customer">
+                Покупатель
+            </a>
+        </p>
+    </div>
+    <div class="collapse" id="Customer">
+        <div class="container out-container">
+            <table class="table table-light border" align="center">
+                <thead class="thead-dark">
+                <tr>
+                    <th>Редактировать</th>
+                    <th class="view-th">
+                        <a href="{% url "customer_edit" order.customer.id %}">Изменить <i class="fas fa-edit"
+                                                                                          title="Изменить"></i></a>
+                    </th>
+                </tr>
+                </thead>
+                <tr>
+                    <th>Имя</th>
+                    <td>{{ order.customer.c_firstname }}</td>
+                </tr>
+                <tr>
+                    <th>Фамилия</th>
+                    <td>{{ order.customer.c_secondname }}</td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>{{ order.customer.c_email }}</td>
+                </tr>
+                <tr>
+                    <th>Телефон</th>
+                    <td>{{ order.customer.c_phone }}</td>
+                </tr>
+                <tr>
+                    <th>Комментарий</th>
+                    <td>{{ order.customer.c_comments }}</td>
+                </tr>
+                <tr>
+                    <th>Организация</th>
+                    <td>{{ order.customer.c_organization }}</td>
+                </tr>
+                <tr>
+                    <th>Создан</th>
+                    <td>{{ order.customer.created }}</td>
+                </tr>
+                <tr>
+                    <th>Обновлён</th>
+                    <td>{{ order.customer.updated }}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <p class="view-collapse">
+            <a class="btn btn-primary btn-view" data-toggle="collapse" href="#ProductsInOrders" role="button"
+               aria-expanded="false"
+               aria-controls="ProductsInOrders">
+                Товары в заказе
+            </a>
+        </p>
+    </div>
+    <div class="collapse" id="ProductsInOrders">
+        <div class="container out-container">
+            <table class="table table-light border table-hover" align="center">
+                <thead class="thead-dark">
+                <tr>
+                    <th>ID</th>
+                    <th>Заказ</th>
+                    <th>Товар</th>
+                    <th>Стоимость</th>
+                    <th>Количество</th>
+                    <th>Сумма НДС</th>
+                    <th>Итоговая стоимость</th>
+                    <td colspan="2" align="center">
+                        <form action="{% url "productInOrder_add" %}">
+                            <button type="submit" class="btn btn-success" title="Добавить"><i
+                                    class="fas fa-plus-square"></i></button>
+                        </form>
+                    </td>
+                </tr>
+                </thead>
+                {% for productInOrder in products_list %}
+                    <tr>
+                        <th>{{ productInOrder.id }}</th>
+                        <td>{{ productInOrder.order }}</td>
+                        <td>{{ productInOrder.product }}</td>
+                        <td>{{ productInOrder.price_per_item }}</td>
+                        <td>{{ productInOrder.number }}</td>
+                        <td>{{ productInOrder.NDS_amount }}</td>
+                        <td>{{ productInOrder.total_price }}</td>
+                        <td align="center"><a href="{% url "productInOrder_edit" productInOrder.id %}"><i
+                                class="fas fa-edit"
+                                title="Изменить"></i></a>
+                        </td>
+                        <td align="center"><a href="{% url "productInOrder_delete" productInOrder.id %}"><i
+                                class="far fa-trash-alt" title="Удалить"></i></a></td>
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+
+    <div class="container">
+        <p class="view-collapse">
+            <a class="btn btn-primary btn-view" data-toggle="collapse" href="#Delivery" role="button"
+               aria-expanded="false"
+               aria-controls="Delivery">
+                Доставки
+            </a>
+        </p>
+    </div>
+    <div class="collapse" id="Delivery">
+        <div class="container out-container">
+        <table class="table table-light border table-hover" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Заказ</th>
+                <th>Тип</th>
+                <th>Адрес</th>
+                <th>Дата</th>
+                <th>Стоимость</th>
+                <th>Статус</th>
+                <td colspan="2" align="center">
+                    <form action="{% url "delivery_add" %}">
+                        <button type="submit" class="btn btn-success" title="Добавить"><i
+                                class="fas fa-plus-square"></i></button>
+                    </form>
+                </td>
+            </tr>
+            </thead>
+            {% for delivery in delivery_list %}
+                <tr>
+                    <th>{{ delivery.id }}</th>
+                    <td>{{ delivery.delivery_order }}</td>
+                    <td>{{ delivery.delivery_type }}</td>
+                    <td>{{ delivery.delivery_address }}</td>
+                    <td>{{ delivery.delivery_date }}</td>
+                    <td>{{ delivery.delivery_price }}</td>
+                    <td>{{ delivery.delivery_status }}</td>
+                    <td align="center"><a href="{% url "delivery_edit" delivery.id %}"><i class="fas fa-edit"
+                                                                                          title="Изменить"></i></a>
+                    </td>
+                    <td align="center"><a href="{% url "delivery_delete" delivery.id %}"><i class="far fa-trash-alt"
+                                                                                            title="Удалить"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    </div>
+
+    <div class="container">
+        <p class="view-collapse">
+            <a class="btn btn-primary btn-view" data-toggle="collapse" href="#Delivery" role="button"
+               aria-expanded="false"
+               aria-controls="Delivery">
+                Платежи
+            </a>
+        </p>
+    </div>
+    <div class="collapse" id="Delivery">
+        <div class="container out-container">
+        <table class="table table-light border table-hover" align="center">
+            <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Заказ</th>
+                <th>Тип</th>
+                <th>Адрес</th>
+                <th>Дата</th>
+                <th>Стоимость</th>
+                <th>Статус</th>
+                <td colspan="2" align="center">
+                    <form action="{% url "delivery_add" %}">
+                        <button type="submit" class="btn btn-success" title="Добавить"><i
+                                class="fas fa-plus-square"></i></button>
+                    </form>
+                </td>
+            </tr>
+            </thead>
+            {% for delivery in delivery_list %}
+                <tr>
+                    <th>{{ delivery.id }}</th>
+                    <td>{{ delivery.delivery_order }}</td>
+                    <td>{{ delivery.delivery_type }}</td>
+                    <td>{{ delivery.delivery_address }}</td>
+                    <td>{{ delivery.delivery_date }}</td>
+                    <td>{{ delivery.delivery_price }}</td>
+                    <td>{{ delivery.delivery_status }}</td>
+                    <td align="center"><a href="{% url "delivery_edit" delivery.id %}"><i class="fas fa-edit"
+                                                                                          title="Изменить"></i></a>
+                    </td>
+                    <td align="center"><a href="{% url "delivery_delete" delivery.id %}"><i class="far fa-trash-alt"
+                                                                                            title="Удалить"></i></a>
+                    </td>
+                </tr>
+            {% endfor %}
+        </table>
+    </div>
+    </div>
+
+{% endblock %}

@@ -60,3 +60,11 @@ input[type="text"]{
    font-size: 11px; // Размер шрифта
    font-family: Tahoma; // Стиль шрифта
 }
+
+.view-collapse{
+    padding-top: 12px;
+}
+
+.btn-view{
+    width: 200px;
+}

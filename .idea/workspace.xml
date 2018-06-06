@@ -2,26 +2,47 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="504aca78-0654-4f7f-9797-7e17c1dd1e27" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/orders/context_processors.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Order/order_add.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Order/order_delete.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Order/order_edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Order/order_out.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ProductInOrder/productInOrder_add.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ProductInOrder/productInOrder_delete.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ProductInOrder/productInOrder_edit.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/ProductInOrder/productInOrder_out.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/login_auth/login.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/login_auth/logout.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/login_auth/view_profile.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/CustomerAddress/customerAddress_add.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/CustomerAddress/customerAddress_delete.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/CustomerAddress/customerAddress_edit.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/CustomerAddress/customerAddress_out.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/templates/Order/order_view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db.sqlite3" afterPath="$PROJECT_DIR$/db.sqlite3" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/kurs_UD/settings.py" afterPath="$PROJECT_DIR$/kurs_UD/settings.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/admin.py" afterPath="$PROJECT_DIR$/orders/admin.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/forms.py" afterPath="$PROJECT_DIR$/orders/forms.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/models.py" afterPath="$PROJECT_DIR$/orders/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/urls.py" afterPath="$PROJECT_DIR$/orders/urls.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/orders/views.py" afterPath="$PROJECT_DIR$/orders/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Product/product_delete.html" afterPath="$PROJECT_DIR$/templates/Product/product_delete.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/static_dev/css/main.css" afterPath="$PROJECT_DIR$/static/static_dev/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Address/address_edit.html" afterPath="$PROJECT_DIR$/templates/Address/address_edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Address/address_out.html" afterPath="$PROJECT_DIR$/templates/Address/address_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Bank/bank_out.html" afterPath="$PROJECT_DIR$/templates/Bank/bank_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Category/category_out.html" afterPath="$PROJECT_DIR$/templates/Category/category_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/City/city_out.html" afterPath="$PROJECT_DIR$/templates/City/city_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Country/country_out.html" afterPath="$PROJECT_DIR$/templates/Country/country_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Customer/customeradd.html" afterPath="$PROJECT_DIR$/templates/Customer/customeradd.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Customer/customeredit.html" afterPath="$PROJECT_DIR$/templates/Customer/customeredit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Customer/customerout.html" afterPath="$PROJECT_DIR$/templates/Customer/customerout.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Customer/customerview.html" afterPath="$PROJECT_DIR$/templates/Customer/customerview.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Delivery/delivery_out.html" afterPath="$PROJECT_DIR$/templates/Delivery/delivery_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/DeliveryType/deliveryType_out.html" afterPath="$PROJECT_DIR$/templates/DeliveryType/deliveryType_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Manufacturer/manufacturer_out.html" afterPath="$PROJECT_DIR$/templates/Manufacturer/manufacturer_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Order/order_add.html" afterPath="$PROJECT_DIR$/templates/Order/order_add.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Order/order_delete.html" afterPath="$PROJECT_DIR$/templates/Order/order_delete.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Order/order_edit.html" afterPath="$PROJECT_DIR$/templates/Order/order_edit.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Order/order_out.html" afterPath="$PROJECT_DIR$/templates/Order/order_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Organization/organization_out.html" afterPath="$PROJECT_DIR$/templates/Organization/organization_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Payment/payment_out.html" afterPath="$PROJECT_DIR$/templates/Payment/payment_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/PaymentType/paymentType_out.html" afterPath="$PROJECT_DIR$/templates/PaymentType/paymentType_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Product/product_out.html" afterPath="$PROJECT_DIR$/templates/Product/product_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/ProductInOrder/productInOrder_out.html" afterPath="$PROJECT_DIR$/templates/ProductInOrder/productInOrder_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Provider/provider_out.html" afterPath="$PROJECT_DIR$/templates/Provider/provider_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Region/region_out.html" afterPath="$PROJECT_DIR$/templates/Region/region_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/Store/store_out.html" afterPath="$PROJECT_DIR$/templates/Store/store_out.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/home.html" afterPath="$PROJECT_DIR$/templates/home.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login_auth/login.html" afterPath="$PROJECT_DIR$/templates/login_auth/login.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/login_auth/logout.html" afterPath="$PROJECT_DIR$/templates/login_auth/logout.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/navbar.html" afterPath="$PROJECT_DIR$/templates/navbar.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,28 +55,27 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="kurs_UD" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="urls.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/orders/urls.py">
+      <file leaf-file-name="order_out.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Order/order_out.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="68" lean-forward="true" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="833">
+              <caret line="49" column="51" lean-forward="false" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="context_processors.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/orders/context_processors.py">
+      <file leaf-file-name="order_edit.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Order/order_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
-              <folding>
-                <element signature="e#0#31#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="198">
+              <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="52" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -63,8 +83,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/orders/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="722">
-              <caret line="893" column="63" lean-forward="true" selection-start-line="893" selection-start-column="63" selection-end-line="893" selection-end-column="63" />
+            <state relative-caret-position="-1821">
+              <caret line="232" column="61" lean-forward="false" selection-start-line="232" selection-start-column="61" selection-end-line="232" selection-end-column="61" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -72,11 +92,267 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/kurs_UD/settings.py">
+      <file leaf-file-name="order_view.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Order/order_view.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="106" column="53" lean-forward="true" selection-start-line="106" selection-start-column="53" selection-end-line="106" selection-end-column="53" />
+            <state relative-caret-position="-2335">
+              <caret line="9" column="86" lean-forward="true" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="delivery_out.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Delivery/delivery_out.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-170">
+              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="51" selection-end-column="10" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="delivery_delete.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Delivery/delivery_delete.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="113">
+              <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="64" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/orders/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="250">
+              <caret line="206" column="60" lean-forward="true" selection-start-line="202" selection-start-column="6" selection-end-line="206" selection-end-column="60" />
+              <folding>
+                <element signature="e#0#28#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DjangoModelDependency/#kurs_UD" pinned="false" current-in-tab="true">
+        <entry file="uml://DjangoModelDependency/#kurs_UD">
+          <provider selected="true" editor-type-id="UmlEditorProvider">
+            <state>
+              <ID>DjangoModelDependency</ID>
+              <OriginalElement>#kurs_UD</OriginalElement>
+              <nodes>
+                <node x="0.0" y="710.0">orders.models.Currency</node>
+                <node x="933.0000000000001" y="966.0">orders.models.Order</node>
+                <node x="210.0000000000001" y="710.0">orders.models.Provider</node>
+                <node x="1638.604166666667" y="977.0">orders.models.Address</node>
+                <node x="1836.75" y="1375.0">orders.models.OrgAddress</node>
+                <node x="850.7291666666667" y="0.0">orders.models.Bank</node>
+                <node x="670.1163194444446" y="1342.0">orders.models.ProductInOrder</node>
+                <node x="1648.875" y="721.0">orders.models.AddressCity</node>
+                <node x="1444.875" y="721.0">orders.models.AddressCountry</node>
+                <node x="1447.7204861111113" y="1375.0">orders.models.CustomerAddress</node>
+                <node x="203.61631944444457" y="1054.0">orders.models.PaymentType</node>
+                <node x="417.0000000000001" y="710.0">orders.models.Manufacturer</node>
+                <node x="1165.0" y="1054.0">orders.models.DeliveryType</node>
+                <node x="669.0000000000001" y="688.0">orders.models.Category</node>
+                <node x="0.0" y="1615.0">typing.Sequence</node>
+                <node x="1152.5" y="1342.0">orders.models.Delivery</node>
+                <node x="34.0" y="1695.0">str</node>
+                <node x="857.0000000000001" y="710.0">orders.models.Store</node>
+                <node x="843.2291666666667" y="234.0">orders.models.Organization</node>
+                <node x="1833.875" y="721.0">orders.models.AddressRegion</node>
+                <node x="395.61631944444457" y="966.0">orders.models.Product</node>
+                <node x="239.61631944444457" y="1364.0">orders.models.Payment</node>
+                <node x="1242.875" y="666.0">orders.models.Customer</node>
+              </nodes>
+              <notes />
+              <edges>
+                <edge source="orders.models.CustomerAddress" target="orders.models.Customer">
+                  <point x="-47.75" y="-81.0" />
+                  <point x="1495.4704861111113" y="1302.0" />
+                  <point x="1379.375" y="1302.0" />
+                  <point x="45.5" y="125.0" />
+                </edge>
+                <edge source="orders.models.Delivery" target="orders.models.Order">
+                  <point x="-64.66666666666674" y="-114.0" />
+                  <point x="1184.8333333333335" y="1322.0" />
+                  <point x="1109.666666666667" y="1322.0" />
+                  <point x="70.66666666666674" y="158.0" />
+                </edge>
+                <edge source="orders.models.OrgAddress" target="orders.models.Organization">
+                  <point x="48.5" y="-81.0" />
+                  <point x="1982.25" y="1322.0" />
+                  <point x="2047.0833333333335" y="1322.0" />
+                  <point x="2047.0833333333335" y="636.0" />
+                  <point x="1032.2291666666667" y="636.0" />
+                  <point x="84.0" y="191.0" />
+                </edge>
+                <edge source="orders.models.Store" target="orders.models.Organization">
+                  <point x="-1.1368683772161603E-13" y="-81.0" />
+                  <point x="943.0" y="646.0" />
+                  <point x="948.2291666666667" y="646.0" />
+                  <point x="0.0" y="191.0" />
+                </edge>
+                <edge source="orders.models.Product" target="orders.models.Store">
+                  <point x="88.0" y="-158.0" />
+                  <point x="593.6163194444446" y="946.0" />
+                  <point x="900.0000000000001" y="946.0" />
+                  <point x="-43.0" y="81.0" />
+                </edge>
+                <edge source="orders.models.Delivery" target="orders.models.Address">
+                  <point x="64.66666666666674" y="-114.0" />
+                  <point x="1314.166666666667" y="1312.0" />
+                  <point x="1670.7708333333337" y="1312.0" />
+                  <point x="-64.33333333333326" y="147.0" />
+                </edge>
+                <edge source="orders.models.Product" target="orders.models.Category">
+                  <point x="44.0" y="-158.0" />
+                  <point x="549.6163194444446" y="936.0" />
+                  <point x="795.0000000000001" y="936.0" />
+                  <point x="42.0" y="103.0" />
+                </edge>
+                <edge source="orders.models.Product" target="orders.models.Currency">
+                  <point x="-88.0" y="-158.0" />
+                  <point x="417.61631944444457" y="946.0" />
+                  <point x="95.0" y="946.0" />
+                  <point x="0.0" y="81.0" />
+                </edge>
+                <edge source="orders.models.Order" target="orders.models.Customer">
+                  <point x="53.0" y="-158.0" />
+                  <point x="1092.0" y="946.0" />
+                  <point x="1288.375" y="946.0" />
+                  <point x="-45.5" y="125.0" />
+                </edge>
+                <edge source="orders.models.Delivery" target="orders.models.DeliveryType">
+                  <point x="0.0" y="-114.0" />
+                  <point x="0.0" y="70.0" />
+                </edge>
+                <edge source="orders.models.Product" target="orders.models.Provider">
+                  <point x="-44.0" y="-158.0" />
+                  <point x="461.61631944444457" y="936.0" />
+                  <point x="303.5000000000001" y="936.0" />
+                  <point x="0.0" y="81.0" />
+                </edge>
+                <edge source="orders.models.OrgAddress" target="orders.models.Address">
+                  <point x="-48.5" y="-81.0" />
+                  <point x="1885.25" y="1322.0" />
+                  <point x="1799.4375000000002" y="1322.0" />
+                  <point x="64.33333333333326" y="147.0" />
+                </edge>
+                <edge source="orders.models.Organization" target="orders.models.Bank">
+                  <point x="0.0" y="-191.0" />
+                  <point x="0.0" y="92.0" />
+                </edge>
+                <edge source="orders.models.Provider" target="orders.models.Organization">
+                  <point x="0.0" y="-81.0" />
+                  <point x="303.5000000000001" y="636.0" />
+                  <point x="864.2291666666667" y="636.0" />
+                  <point x="-84.0" y="191.0" />
+                </edge>
+                <edge source="orders.models.Payment" target="orders.models.PaymentType">
+                  <point x="-50.0" y="-92.0" />
+                  <point x="0.0" y="70.0" />
+                </edge>
+                <edge source="orders.models.ProductInOrder" target="orders.models.Order">
+                  <point x="46.75" y="-114.0" />
+                  <point x="810.3663194444446" y="1322.0" />
+                  <point x="1039.0" y="1322.0" />
+                  <point x="0.0" y="158.0" />
+                </edge>
+                <edge source="orders.models.Payment" target="orders.models.Order">
+                  <point x="50.0" y="-92.0" />
+                  <point x="389.61631944444457" y="1312.0" />
+                  <point x="968.3333333333335" y="1312.0" />
+                  <point x="-70.66666666666663" y="158.0" />
+                </edge>
+                <edge source="orders.models.Address" target="orders.models.AddressCity">
+                  <point x="0.0" y="-147.0" />
+                  <point x="1735.104166666667" y="946.0" />
+                  <point x="1731.375" y="946.0" />
+                  <point x="0.0" y="70.0" />
+                </edge>
+                <edge source="str" target="typing.Sequence">
+                  <point x="0.0" y="-15.0" />
+                  <point x="0.0" y="15.0" />
+                </edge>
+                <edge source="orders.models.CustomerAddress" target="orders.models.Address">
+                  <point x="47.75" y="-81.0" />
+                  <point x="1590.9704861111113" y="1322.0" />
+                  <point x="1735.104166666667" y="1322.0" />
+                  <point x="0.0" y="147.0" />
+                </edge>
+                <edge source="orders.models.Address" target="orders.models.AddressRegion">
+                  <point x="64.33333333333326" y="-147.0" />
+                  <point x="1799.4375000000002" y="946.0" />
+                  <point x="1922.875" y="946.0" />
+                  <point x="0.0" y="70.0" />
+                </edge>
+                <edge source="orders.models.ProductInOrder" target="orders.models.Product">
+                  <point x="-46.75" y="-114.0" />
+                  <point x="716.8663194444446" y="1302.0" />
+                  <point x="505.61631944444457" y="1302.0" />
+                  <point x="0.0" y="158.0" />
+                </edge>
+                <edge source="orders.models.Product" target="orders.models.Manufacturer">
+                  <point x="0.0" y="-158.0" />
+                  <point x="505.61631944444457" y="946.0" />
+                  <point x="523.0000000000001" y="946.0" />
+                  <point x="0.0" y="81.0" />
+                </edge>
+                <edge source="orders.models.Category" target="orders.models.Category">
+                  <point x="-42.0" y="103.0" />
+                  <point x="711.0000000000001" y="914.0" />
+                  <point x="649.0000000000001" y="914.0" />
+                  <point x="649.0000000000001" y="791.0" />
+                  <point x="-84.0" y="-0.0" />
+                </edge>
+                <edge source="orders.models.Manufacturer" target="orders.models.Organization">
+                  <point x="0.0" y="-81.0" />
+                  <point x="523.0000000000001" y="646.0" />
+                  <point x="906.2291666666667" y="646.0" />
+                  <point x="-42.0" y="191.0" />
+                </edge>
+                <edge source="orders.models.Order" target="orders.models.Store">
+                  <point x="-53.0" y="-158.0" />
+                  <point x="43.0" y="81.0" />
+                </edge>
+                <edge source="orders.models.Customer" target="orders.models.Organization">
+                  <point x="0.0" y="-125.0" />
+                  <point x="1333.875" y="646.0" />
+                  <point x="990.2291666666667" y="646.0" />
+                  <point x="42.0" y="191.0" />
+                </edge>
+                <edge source="orders.models.Address" target="orders.models.AddressCountry">
+                  <point x="-64.33333333333326" y="-147.0" />
+                  <point x="1670.7708333333337" y="946.0" />
+                  <point x="1536.875" y="946.0" />
+                  <point x="0.0" y="70.0" />
+                </edge>
+              </edges>
+              <settings layout="Hierarchic Group" zoom="0.6" x="1441.98967679875" y="1073.0145352913491" />
+              <SelectedNodes />
+              <Categories>
+                <Category>Fields</Category>
+              </Categories>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="organization_out.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Organization/organization_out.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/orders/admin.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="476">
+              <caret line="92" column="37" lean-forward="false" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -95,68 +371,68 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>order</find>
-      <find>Order</find>
-      <find>Address</find>
-      <find>bank</find>
-      <find>delivery</find>
-      <find>Delivery Type</find>
-      <find>deliveryType</find>
-      <find>AddressCo</find>
-      <find>paymentType</find>
-      <find>Payment Type</find>
-      <find>country</find>
-      <find>city</find>
-      <find>region</find>
-      <find>deli</find>
-      <find>Deli</find>
       <find>delive</find>
       <find>category</find>
       <find>customer.delete()</find>
       <find>delete()</find>
       <find>Pay</find>
-      <find>Org</find>
-      <find>Orga</find>
       <find>payment</find>
       <find>organization</find>
       <find>manufa</find>
       <find>pro</find>
       <find>produ</find>
+      <find>Org</find>
       <find>store</find>
-      <find>form</find>
+      <find>customer_address</find>
+      <find>customerAddress</find>
+      <find>Store</find>
       <find>product</find>
+      <find>form</find>
+      <find>used</find>
+      <find>Address</find>
+      <find>Cate</find>
+      <find>Orga</find>
+      <find>adr_address</find>
+      <find>orders</find>
+      <find>order</find>
+      <find>Order</find>
+      <find>customer</find>
+      <find>zip</find>
+      <find>Payment</find>
+      <find>address</find>
+      <find>Delivery</find>
     </findStrings>
     <replaceStrings>
-      <replace>banks</replace>
-      <replace>caregories</replace>
-      <replace>caregory</replace>
-      <replace>address</replace>
-      <replace>Change</replace>
-      <replace>type</replace>
-      <replace>Store</replace>
-      <replace>bank</replace>
-      <replace>PaymentType</replace>
       <replace>Delivery</replace>
-      <replace>delivery</replace>
-      <replace>deliveryType</replace>
       <replace>Payment Type</replace>
-      <replace>paymentType</replace>
-      <replace>country</replace>
       <replace>Country</replace>
-      <replace>region</replace>
-      <replace>category</replace>
       <replace>city</replace>
       <replace>customer.delete()</replace>
       <replace>address.delete()</replace>
-      <replace>payment</replace>
       <replace>is_active = False</replace>
-      <replace>organization</replace>
-      <replace>store</replace>
-      <replace>manufacturer</replace>
-      <replace>provider</replace>
-      <replace>productInOrder</replace>
-      <replace>product</replace>
       <replace>order</replace>
+      <replace>Customer</replace>
+      <replace>ProductCurrency</replace>
+      <replace>CustomerAddress</replace>
+      <replace>bank</replace>
+      <replace>category</replace>
+      <replace>City</replace>
+      <replace>country</replace>
+      <replace>customer</replace>
+      <replace>customerAddress</replace>
+      <replace>delivery</replace>
+      <replace>deliveryType</replace>
+      <replace>login</replace>
+      <replace>logout</replace>
+      <replace>manufacturer</replace>
+      <replace>organization</replace>
+      <replace>payment</replace>
+      <replace>product</replace>
+      <replace>region</replace>
+      <replace>provider</replace>
+      <replace>paymentType</replace>
+      <replace>store</replace>
+      <replace>productInOrder</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -165,57 +441,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/templates/Category/category_edit.html" />
-        <option value="$PROJECT_DIR$/templates/Category/category_delete.html" />
-        <option value="$PROJECT_DIR$/templates/Payment/payment_out.html" />
-        <option value="$PROJECT_DIR$/templates/Category/category_add.html" />
-        <option value="$PROJECT_DIR$/templates/Delivery/delivery_add.html" />
-        <option value="$PROJECT_DIR$/templates/Payment/payment_add.html" />
-        <option value="$PROJECT_DIR$/templates/Payment/payment_edit.html" />
-        <option value="$PROJECT_DIR$/templates/Payment/payment_delete.html" />
-        <option value="$PROJECT_DIR$/templates/Organization/organization_out.html" />
-        <option value="$PROJECT_DIR$/templates/Organization/organization_add.html" />
-        <option value="$PROJECT_DIR$/templates/Organization/organization_edit.html" />
-        <option value="$PROJECT_DIR$/templates/Organization/organization_delete.html" />
-        <option value="$PROJECT_DIR$/templates/Store/store_delete.html" />
-        <option value="$PROJECT_DIR$/templates/Store/store_edit.html" />
-        <option value="$PROJECT_DIR$/templates/Manufacturer/man_out.html" />
-        <option value="$PROJECT_DIR$/templates/Manufacturer/manufacturer_out.html" />
-        <option value="$PROJECT_DIR$/templates/Manufacturer/manufacturer_edit.html" />
-        <option value="$PROJECT_DIR$/templates/Manufacturer/manufacturer_delete.html" />
-        <option value="$PROJECT_DIR$/templates/Provider/provider_out.html" />
-        <option value="$PROJECT_DIR$/templates/Provider/provider_add.html" />
-        <option value="$PROJECT_DIR$/templates/Store/store_add.html" />
-        <option value="$PROJECT_DIR$/templates/Manufacturer/manufacturer_add.html" />
-        <option value="$PROJECT_DIR$/templates/Product.html" />
-        <option value="$PROJECT_DIR$/templates/Provider/provider_edit.html" />
-        <option value="$PROJECT_DIR$/templates/Provider/provider_delete.html" />
-        <option value="$PROJECT_DIR$/templates/Store/store_out.html" />
-        <option value="$PROJECT_DIR$/static/static_dev/css/main.css" />
-        <option value="$PROJECT_DIR$/templates/Product/product_out.html" />
-        <option value="$PROJECT_DIR$/templates/Product/product_add.html" />
         <option value="$PROJECT_DIR$/templates/ProductInOrder.html" />
-        <option value="$PROJECT_DIR$/templates/ProductInOrder/productInOrder_out.html" />
-        <option value="$PROJECT_DIR$/orders/models.py" />
         <option value="$PROJECT_DIR$/templates/ProductInOrder/productInOrder_add.html" />
         <option value="$PROJECT_DIR$/templates/ProductInOrder/productInOrder_edit.html" />
         <option value="$PROJECT_DIR$/templates/ProductInOrder/productInOrder_delete.html" />
         <option value="$PROJECT_DIR$/templates/Product/product_delete.html" />
         <option value="$PROJECT_DIR$/templates/Order.html" />
-        <option value="$PROJECT_DIR$/templates/Order/order_add.html" />
-        <option value="$PROJECT_DIR$/orders/forms.py" />
         <option value="$PROJECT_DIR$/templates/Product/product_edit.html" />
-        <option value="$PROJECT_DIR$/templates/Order/order_edit.html" />
-        <option value="$PROJECT_DIR$/templates/Order/order_out.html" />
-        <option value="$PROJECT_DIR$/templates/login_auth/login.html" />
         <option value="$PROJECT_DIR$/templates/login_auth/view_profile.html" />
-        <option value="$PROJECT_DIR$/templates/navbar.html" />
-        <option value="$PROJECT_DIR$/templates/login_auth/logout.html" />
-        <option value="$PROJECT_DIR$/templates/Order/order_delete.html" />
         <option value="$PROJECT_DIR$/orders/context_processors.py" />
         <option value="$PROJECT_DIR$/kurs_UD/settings.py" />
+        <option value="$PROJECT_DIR$/templates/navbar.html" />
+        <option value="$PROJECT_DIR$/templates/Product/product_add.html" />
+        <option value="$PROJECT_DIR$/templates/CustomerAddress/customerAddress_add.html" />
+        <option value="$PROJECT_DIR$/templates/CustomerAddress/customerAddress_edit.html" />
+        <option value="$PROJECT_DIR$/templates/CustomerAddress/customerAddress_delete.html" />
+        <option value="$PROJECT_DIR$/templates/Address/address_edit.html" />
+        <option value="$PROJECT_DIR$/templates/Address/address_out.html" />
+        <option value="$PROJECT_DIR$/templates/Bank/bank_out.html" />
+        <option value="$PROJECT_DIR$/templates/Category/category_out.html" />
+        <option value="$PROJECT_DIR$/templates/City/city_out.html" />
+        <option value="$PROJECT_DIR$/templates/Country/country_out.html" />
+        <option value="$PROJECT_DIR$/templates/CustomerAddress/customerAddress_out.html" />
+        <option value="$PROJECT_DIR$/templates/Delivery/delivery_out.html" />
+        <option value="$PROJECT_DIR$/templates/DeliveryType/deliveryType_out.html" />
+        <option value="$PROJECT_DIR$/templates/login_auth/login.html" />
+        <option value="$PROJECT_DIR$/templates/login_auth/logout.html" />
+        <option value="$PROJECT_DIR$/templates/Manufacturer/manufacturer_out.html" />
+        <option value="$PROJECT_DIR$/templates/Payment/payment_out.html" />
+        <option value="$PROJECT_DIR$/templates/PaymentType/paymentType_out.html" />
+        <option value="$PROJECT_DIR$/templates/Product/product_out.html" />
+        <option value="$PROJECT_DIR$/templates/ProductInOrder/productInOrder_out.html" />
+        <option value="$PROJECT_DIR$/templates/Provider/provider_out.html" />
+        <option value="$PROJECT_DIR$/templates/Region/region_out.html" />
+        <option value="$PROJECT_DIR$/templates/Store/store_out.html" />
+        <option value="$PROJECT_DIR$/templates/home.html" />
         <option value="$PROJECT_DIR$/orders/urls.py" />
+        <option value="$PROJECT_DIR$/static/static_dev/css/main.css" />
+        <option value="$PROJECT_DIR$/templates/Order/order_add.html" />
+        <option value="$PROJECT_DIR$/templates/Order/order_delete.html" />
+        <option value="$PROJECT_DIR$/templates/Customer/customeradd.html" />
+        <option value="$PROJECT_DIR$/templates/Customer/customeredit.html" />
+        <option value="$PROJECT_DIR$/templates/Customer/customerout.html" />
+        <option value="$PROJECT_DIR$/templates/Customer/customerview.html" />
+        <option value="$PROJECT_DIR$/orders/forms.py" />
+        <option value="$PROJECT_DIR$/orders/admin.py" />
+        <option value="$PROJECT_DIR$/templates/Order/order_out.html" />
+        <option value="$PROJECT_DIR$/templates/Order/order_edit.html" />
         <option value="$PROJECT_DIR$/orders/views.py" />
+        <option value="$PROJECT_DIR$/templates/Order/order_view.html" />
+        <option value="$PROJECT_DIR$/templates/Organization/organization_out.html" />
+        <option value="$PROJECT_DIR$/orders/models.py" />
       </list>
     </option>
   </component>
@@ -247,17 +523,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="kurs_UD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kurs_UD" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="kurs_UD" type="b2602c69:ProjectViewProjectNode" />
-              <item name="kurs_UD" type="462c0819:PsiDirectoryNode" />
               <item name="kurs_UD" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -292,27 +562,40 @@
               <item name="kurs_UD" type="b2602c69:ProjectViewProjectNode" />
               <item name="kurs_UD" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="Delivery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kurs_UD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kurs_UD" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="Order" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="kurs_UD" type="b2602c69:ProjectViewProjectNode" />
               <item name="kurs_UD" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="Product" type="462c0819:PsiDirectoryNode" />
+              <item name="Organization" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="kurs_UD" type="b2602c69:ProjectViewProjectNode" />
+              <item name="kurs_UD" type="462c0819:PsiDirectoryNode" />
+              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="ProductInOrder" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../django_project/test_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../.." />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.django.DjangoModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -366,12 +649,21 @@
       <option name="presentableId" value="Default" />
       <updated>1526915084398</updated>
     </task>
+    <task id="LOCAL-00001" summary="add login and login redirect">
+      <created>1528115297777</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1528115297777</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11767838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12673056" sideWeight="0.49434572" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -379,8 +671,8 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3286334" sideWeight="0.49375" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286334" sideWeight="0.49375" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11448349" sideWeight="0.5056543" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -391,27 +683,6 @@
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.50625" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3286334" sideWeight="0.49375" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11767838" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32910052" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973376" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -419,308 +690,109 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add login and login redirect" />
+    <option name="LAST_COMMIT_MESSAGE" value="add login and login redirect" />
+  </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="3" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/Payment/payment_out.html">
+    <entry file="file://$PROJECT_DIR$/templates/CustomerAddress/customerAddress_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="773">
-          <caret line="52" column="14" lean-forward="true" selection-start-line="52" selection-start-column="14" selection-end-line="52" selection-end-column="14" />
+        <state relative-caret-position="164">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="48" selection-end-column="20" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Delivery/delivery_add.html">
+    <entry file="file://$PROJECT_DIR$/templates/CustomerAddress/customerAddress_delete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="35" column="89" lean-forward="true" selection-start-line="34" selection-start-column="52" selection-end-line="35" selection-end-column="89" />
+        <state relative-caret-position="351">
+          <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/home.html">
+    <entry file="file://$PROJECT_DIR$/templates/Address/address_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="209" column="24" lean-forward="false" selection-start-line="209" selection-start-column="24" selection-end-line="210" selection-end-column="113" />
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="12" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Payment/payment_add.html">
+    <entry file="file://$PROJECT_DIR$/templates/Address/address_out.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="38" lean-forward="true" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
+        <state relative-caret-position="68">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="9" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Payment/payment_edit.html">
+    <entry file="file://$PROJECT_DIR$/templates/Bank/bank_out.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="22" />
+        <state relative-caret-position="119">
+          <caret line="7" column="91" lean-forward="false" selection-start-line="7" selection-start-column="91" selection-end-line="7" selection-end-column="91" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Payment/payment_delete.html">
+    <entry file="file://$PROJECT_DIR$/templates/Category/category_out.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="51" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="14" />
+        <state relative-caret-position="136">
+          <caret line="11" column="6" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="11" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Organization/organization_add.html">
+    <entry file="file://$PROJECT_DIR$/templates/City/city_out.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="32" column="36" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="22" />
+        <state relative-caret-position="102">
+          <caret line="9" column="99" lean-forward="false" selection-start-line="9" selection-start-column="99" selection-end-line="9" selection-end-column="99" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Organization/organization_edit.html">
+    <entry file="file://$PROJECT_DIR$/templates/Country/country_out.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="436">
-          <caret line="73" column="55" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="22" />
+        <state relative-caret-position="102">
+          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Organization/organization_delete.html">
+    <entry file="file://$PROJECT_DIR$/templates/CustomerAddress/customerAddress_out.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="89" column="10" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="91" selection-end-column="14" />
+        <state relative-caret-position="136">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Organization/organization_out.html">
+    <entry file="file://$PROJECT_DIR$/templates/DeliveryType/deliveryType_out.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="21" column="16" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="64" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Manufacturer/manufacturer_out.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="39" column="117" lean-forward="true" selection-start-line="39" selection-start-column="117" selection-end-line="39" selection-end-column="117" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Manufacturer/manufacturer_delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="44" column="16" lean-forward="true" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Manufacturer/manufacturer_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Manufacturer/manufacturer_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="73" lean-forward="false" selection-start-line="9" selection-start-column="73" selection-end-line="9" selection-end-column="73" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Product.html" />
-    <entry file="file://$PROJECT_DIR$/templates/Provider/provider_out.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="491">
-          <caret line="47" column="14" lean-forward="true" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Provider/provider_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="884">
-          <caret line="52" column="22" lean-forward="true" selection-start-line="52" selection-start-column="22" selection-end-line="52" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Provider/provider_delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-23">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Provider/provider_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="75" lean-forward="true" selection-start-line="10" selection-start-column="75" selection-end-line="10" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/static_dev/css/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="61" column="1" lean-forward="false" selection-start-line="61" selection-start-column="1" selection-end-line="61" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Store/store_out.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="14" lean-forward="false" selection-start-line="47" selection-start-column="14" selection-end-line="47" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Store/store_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="42" column="22" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Store/store_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="37" column="48" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="52" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Store/store_delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="17" column="31" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="51" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ProductInOrder.html" />
-    <entry file="file://$PROJECT_DIR$/templates/ProductInOrder/productInOrder_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="39" column="91" lean-forward="true" selection-start-line="39" selection-start-column="90" selection-end-line="39" selection-end-column="91" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ProductInOrder/productInOrder_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="43" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/ProductInOrder/productInOrder_out.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Order.html" />
-    <entry file="file://$PROJECT_DIR$/templates/ProductInOrder/productInOrder_delete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="21" column="49" lean-forward="true" selection-start-line="21" selection-start-column="49" selection-end-line="21" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Product/product_out.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="61" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Customer/customerout.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="48" column="25" lean-forward="true" selection-start-line="47" selection-start-column="20" selection-end-line="48" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Product/product_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="27" column="20" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="82" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/orders/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="345" column="60" lean-forward="false" selection-start-line="345" selection-start-column="60" selection-end-line="345" selection-end-column="60" />
-          <folding>
-            <element signature="e#0#28#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Order/order_add.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
-          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="45" selection-end-column="20" />
+        <state relative-caret-position="68">
+          <caret line="7" column="115" lean-forward="false" selection-start-line="7" selection-start-column="115" selection-end-line="7" selection-end-column="115" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/login_auth/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="14" lean-forward="true" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+        <state relative-caret-position="136">
+          <caret line="8" column="100" lean-forward="false" selection-start-line="8" selection-start-column="100" selection-end-line="8" selection-end-column="100" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/orders/forms.py">
+    <entry file="file://$PROJECT_DIR$/templates/login_auth/logout.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="40" column="39" lean-forward="false" selection-start-line="40" selection-start-column="39" selection-end-line="40" selection-end-column="39" />
-          <folding>
-            <element signature="e#0#24#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/site-packages/django/contrib/auth/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="145" column="27" lean-forward="false" selection-start-line="145" selection-start-column="8" selection-end-line="145" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Order/order_out.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="30" column="28" lean-forward="false" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Product/product_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="12" selection-end-column="10" />
+        <state relative-caret-position="170">
+          <caret line="10" column="10" lean-forward="true" selection-start-line="10" selection-start-column="10" selection-end-line="10" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -733,42 +805,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/navbar.html">
+    <entry file="file://$PROJECT_DIR$/templates/Manufacturer/manufacturer_out.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="49" column="54" lean-forward="false" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="54" />
+        <state relative-caret-position="136">
+          <caret line="11" column="10" lean-forward="true" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/login_auth/logout.html">
+    <entry file="file://$PROJECT_DIR$/templates/Payment/payment_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="38" lean-forward="true" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/PaymentType/paymentType_out.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
-          <caret line="6" column="14" lean-forward="false" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+          <caret line="9" column="10" lean-forward="true" selection-start-line="9" selection-start-column="10" selection-end-line="9" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Order/order_edit.html">
+    <entry file="file://$PROJECT_DIR$/templates/Product/product_out.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="60" selection-end-column="20" />
+        <state relative-caret-position="51">
+          <caret line="9" column="102" lean-forward="false" selection-start-line="9" selection-start-column="102" selection-end-line="9" selection-end-column="102" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Order/order_delete.html">
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="67" column="14" lean-forward="false" selection-start-line="67" selection-start-column="14" selection-end-line="67" selection-end-column="14" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Product/product_delete.html">
+    <entry file="file://$PROJECT_DIR$/templates/home.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="538">
-          <caret line="51" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="79" selection-end-column="14" />
+        <state relative-caret-position="-272">
+          <caret line="2" column="24" lean-forward="false" selection-start-line="2" selection-start-column="24" selection-end-line="2" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Region/region_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Provider/provider_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="10" lean-forward="false" selection-start-line="11" selection-start-column="10" selection-end-line="11" selection-end-column="10" />
           <folding />
         </state>
       </provider>
@@ -781,43 +877,452 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/orders/context_processors.py">
+    <entry file="file://$PROJECT_DIR$/orders/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="37" column="83" lean-forward="false" selection-start-line="37" selection-start-column="83" selection-end-line="37" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Store/store_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="629">
+          <caret line="37" column="39" lean-forward="false" selection-start-line="37" selection-start-column="39" selection-end-line="38" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/ProductInOrder/productInOrder_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="17" column="0" lean-forward="false" selection-start-line="17" selection-start-column="0" selection-end-line="52" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/static_dev/css/main.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="68" column="14" lean-forward="false" selection-start-line="68" selection-start-column="14" selection-end-line="68" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm2017.2/system/python_stubs/-2084488684/builtins.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-58">
+          <caret line="103" column="4" lean-forward="false" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Order/order_add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="37" column="21" lean-forward="false" selection-start-line="37" selection-start-column="21" selection-end-line="37" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orders/migrations/0050_product_product_currency.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orders/migrations/0051_auto_20180603_1927.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orders/migrations/0062_auto_20180605_0009.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orders/migrations/0061_auto_20180604_2244.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orders/migrations/0062_auto_20180605_2153.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Order/order_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="219">
+          <caret line="38" column="38" lean-forward="false" selection-start-line="38" selection-start-column="38" selection-end-line="38" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Customer/customeradd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="28" column="21" lean-forward="false" selection-start-line="28" selection-start-column="21" selection-end-line="28" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Customer/customerdelete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Customer/customeredit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="29" column="21" lean-forward="false" selection-start-line="29" selection-start-column="21" selection-end-line="29" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Customer/customerout.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="42" column="49" lean-forward="false" selection-start-line="42" selection-start-column="49" selection-end-line="42" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Customer/customerview.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <caret line="9" column="37" lean-forward="true" selection-start-line="9" selection-start-column="37" selection-end-line="9" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orders/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="31" lean-forward="true" selection-start-line="16" selection-start-column="31" selection-end-line="16" selection-end-column="31" />
           <folding>
-            <element signature="e#0#31#0" expanded="true" />
+            <element signature="e#0#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/kurs_UD/settings.py">
+    <entry file="file://$PROJECT_DIR$/orders/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="106" column="53" lean-forward="true" selection-start-line="106" selection-start-column="53" selection-end-line="106" selection-end-column="53" />
+        <state relative-caret-position="476">
+          <caret line="92" column="37" lean-forward="false" selection-start-line="92" selection-start-column="37" selection-end-line="92" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Order/order_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="51" lean-forward="false" selection-start-line="49" selection-start-column="51" selection-end-line="49" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Order/order_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="33" column="16" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="52" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Delivery/delivery_delete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="113">
+          <caret line="31" column="8" lean-forward="true" selection-start-line="31" selection-start-column="8" selection-end-line="64" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Delivery/delivery_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-170">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="51" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/orders/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="722">
-          <caret line="893" column="63" lean-forward="true" selection-start-line="893" selection-start-column="63" selection-end-line="893" selection-end-column="63" />
+        <state relative-caret-position="-1821">
+          <caret line="232" column="61" lean-forward="false" selection-start-line="232" selection-start-column="61" selection-end-line="232" selection-end-column="61" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/orders/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/Order/order_view.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="68" lean-forward="true" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
+        <state relative-caret-position="-2335">
+          <caret line="9" column="86" lean-forward="true" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Organization/organization_out.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="33" lean-forward="true" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python36-32/Lib/typing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="1864" column="10" lean-forward="false" selection-start-line="1864" selection-start-column="10" selection-end-line="1864" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/orders/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="206" column="60" lean-forward="true" selection-start-line="202" selection-start-column="6" selection-end-line="206" selection-end-column="60" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#28#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="uml://DjangoModelDependency/#kurs_UD">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>DjangoModelDependency</ID>
+          <OriginalElement>#kurs_UD</OriginalElement>
+          <nodes>
+            <node x="0.0" y="710.0">orders.models.Currency</node>
+            <node x="933.0000000000001" y="966.0">orders.models.Order</node>
+            <node x="210.0000000000001" y="710.0">orders.models.Provider</node>
+            <node x="1638.604166666667" y="977.0">orders.models.Address</node>
+            <node x="1836.75" y="1375.0">orders.models.OrgAddress</node>
+            <node x="850.7291666666667" y="0.0">orders.models.Bank</node>
+            <node x="670.1163194444446" y="1342.0">orders.models.ProductInOrder</node>
+            <node x="1648.875" y="721.0">orders.models.AddressCity</node>
+            <node x="1444.875" y="721.0">orders.models.AddressCountry</node>
+            <node x="1447.7204861111113" y="1375.0">orders.models.CustomerAddress</node>
+            <node x="203.61631944444457" y="1054.0">orders.models.PaymentType</node>
+            <node x="417.0000000000001" y="710.0">orders.models.Manufacturer</node>
+            <node x="1165.0" y="1054.0">orders.models.DeliveryType</node>
+            <node x="669.0000000000001" y="688.0">orders.models.Category</node>
+            <node x="0.0" y="1615.0">typing.Sequence</node>
+            <node x="1152.5" y="1342.0">orders.models.Delivery</node>
+            <node x="34.0" y="1695.0">str</node>
+            <node x="857.0000000000001" y="710.0">orders.models.Store</node>
+            <node x="843.2291666666667" y="234.0">orders.models.Organization</node>
+            <node x="1833.875" y="721.0">orders.models.AddressRegion</node>
+            <node x="395.61631944444457" y="966.0">orders.models.Product</node>
+            <node x="239.61631944444457" y="1364.0">orders.models.Payment</node>
+            <node x="1242.875" y="666.0">orders.models.Customer</node>
+          </nodes>
+          <notes />
+          <edges>
+            <edge source="orders.models.CustomerAddress" target="orders.models.Customer">
+              <point x="-47.75" y="-81.0" />
+              <point x="1495.4704861111113" y="1302.0" />
+              <point x="1379.375" y="1302.0" />
+              <point x="45.5" y="125.0" />
+            </edge>
+            <edge source="orders.models.Delivery" target="orders.models.Order">
+              <point x="-64.66666666666674" y="-114.0" />
+              <point x="1184.8333333333335" y="1322.0" />
+              <point x="1109.666666666667" y="1322.0" />
+              <point x="70.66666666666674" y="158.0" />
+            </edge>
+            <edge source="orders.models.OrgAddress" target="orders.models.Organization">
+              <point x="48.5" y="-81.0" />
+              <point x="1982.25" y="1322.0" />
+              <point x="2047.0833333333335" y="1322.0" />
+              <point x="2047.0833333333335" y="636.0" />
+              <point x="1032.2291666666667" y="636.0" />
+              <point x="84.0" y="191.0" />
+            </edge>
+            <edge source="orders.models.Store" target="orders.models.Organization">
+              <point x="-1.1368683772161603E-13" y="-81.0" />
+              <point x="943.0" y="646.0" />
+              <point x="948.2291666666667" y="646.0" />
+              <point x="0.0" y="191.0" />
+            </edge>
+            <edge source="orders.models.Product" target="orders.models.Store">
+              <point x="88.0" y="-158.0" />
+              <point x="593.6163194444446" y="946.0" />
+              <point x="900.0000000000001" y="946.0" />
+              <point x="-43.0" y="81.0" />
+            </edge>
+            <edge source="orders.models.Delivery" target="orders.models.Address">
+              <point x="64.66666666666674" y="-114.0" />
+              <point x="1314.166666666667" y="1312.0" />
+              <point x="1670.7708333333337" y="1312.0" />
+              <point x="-64.33333333333326" y="147.0" />
+            </edge>
+            <edge source="orders.models.Product" target="orders.models.Category">
+              <point x="44.0" y="-158.0" />
+              <point x="549.6163194444446" y="936.0" />
+              <point x="795.0000000000001" y="936.0" />
+              <point x="42.0" y="103.0" />
+            </edge>
+            <edge source="orders.models.Product" target="orders.models.Currency">
+              <point x="-88.0" y="-158.0" />
+              <point x="417.61631944444457" y="946.0" />
+              <point x="95.0" y="946.0" />
+              <point x="0.0" y="81.0" />
+            </edge>
+            <edge source="orders.models.Order" target="orders.models.Customer">
+              <point x="53.0" y="-158.0" />
+              <point x="1092.0" y="946.0" />
+              <point x="1288.375" y="946.0" />
+              <point x="-45.5" y="125.0" />
+            </edge>
+            <edge source="orders.models.Delivery" target="orders.models.DeliveryType">
+              <point x="0.0" y="-114.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+            <edge source="orders.models.Product" target="orders.models.Provider">
+              <point x="-44.0" y="-158.0" />
+              <point x="461.61631944444457" y="936.0" />
+              <point x="303.5000000000001" y="936.0" />
+              <point x="0.0" y="81.0" />
+            </edge>
+            <edge source="orders.models.OrgAddress" target="orders.models.Address">
+              <point x="-48.5" y="-81.0" />
+              <point x="1885.25" y="1322.0" />
+              <point x="1799.4375000000002" y="1322.0" />
+              <point x="64.33333333333326" y="147.0" />
+            </edge>
+            <edge source="orders.models.Organization" target="orders.models.Bank">
+              <point x="0.0" y="-191.0" />
+              <point x="0.0" y="92.0" />
+            </edge>
+            <edge source="orders.models.Provider" target="orders.models.Organization">
+              <point x="0.0" y="-81.0" />
+              <point x="303.5000000000001" y="636.0" />
+              <point x="864.2291666666667" y="636.0" />
+              <point x="-84.0" y="191.0" />
+            </edge>
+            <edge source="orders.models.Payment" target="orders.models.PaymentType">
+              <point x="-50.0" y="-92.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+            <edge source="orders.models.ProductInOrder" target="orders.models.Order">
+              <point x="46.75" y="-114.0" />
+              <point x="810.3663194444446" y="1322.0" />
+              <point x="1039.0" y="1322.0" />
+              <point x="0.0" y="158.0" />
+            </edge>
+            <edge source="orders.models.Payment" target="orders.models.Order">
+              <point x="50.0" y="-92.0" />
+              <point x="389.61631944444457" y="1312.0" />
+              <point x="968.3333333333335" y="1312.0" />
+              <point x="-70.66666666666663" y="158.0" />
+            </edge>
+            <edge source="orders.models.Address" target="orders.models.AddressCity">
+              <point x="0.0" y="-147.0" />
+              <point x="1735.104166666667" y="946.0" />
+              <point x="1731.375" y="946.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+            <edge source="str" target="typing.Sequence">
+              <point x="0.0" y="-15.0" />
+              <point x="0.0" y="15.0" />
+            </edge>
+            <edge source="orders.models.CustomerAddress" target="orders.models.Address">
+              <point x="47.75" y="-81.0" />
+              <point x="1590.9704861111113" y="1322.0" />
+              <point x="1735.104166666667" y="1322.0" />
+              <point x="0.0" y="147.0" />
+            </edge>
+            <edge source="orders.models.Address" target="orders.models.AddressRegion">
+              <point x="64.33333333333326" y="-147.0" />
+              <point x="1799.4375000000002" y="946.0" />
+              <point x="1922.875" y="946.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+            <edge source="orders.models.ProductInOrder" target="orders.models.Product">
+              <point x="-46.75" y="-114.0" />
+              <point x="716.8663194444446" y="1302.0" />
+              <point x="505.61631944444457" y="1302.0" />
+              <point x="0.0" y="158.0" />
+            </edge>
+            <edge source="orders.models.Product" target="orders.models.Manufacturer">
+              <point x="0.0" y="-158.0" />
+              <point x="505.61631944444457" y="946.0" />
+              <point x="523.0000000000001" y="946.0" />
+              <point x="0.0" y="81.0" />
+            </edge>
+            <edge source="orders.models.Category" target="orders.models.Category">
+              <point x="-42.0" y="103.0" />
+              <point x="711.0000000000001" y="914.0" />
+              <point x="649.0000000000001" y="914.0" />
+              <point x="649.0000000000001" y="791.0" />
+              <point x="-84.0" y="-0.0" />
+            </edge>
+            <edge source="orders.models.Manufacturer" target="orders.models.Organization">
+              <point x="0.0" y="-81.0" />
+              <point x="523.0000000000001" y="646.0" />
+              <point x="906.2291666666667" y="646.0" />
+              <point x="-42.0" y="191.0" />
+            </edge>
+            <edge source="orders.models.Order" target="orders.models.Store">
+              <point x="-53.0" y="-158.0" />
+              <point x="43.0" y="81.0" />
+            </edge>
+            <edge source="orders.models.Customer" target="orders.models.Organization">
+              <point x="0.0" y="-125.0" />
+              <point x="1333.875" y="646.0" />
+              <point x="990.2291666666667" y="646.0" />
+              <point x="42.0" y="191.0" />
+            </edge>
+            <edge source="orders.models.Address" target="orders.models.AddressCountry">
+              <point x="-64.33333333333326" y="-147.0" />
+              <point x="1670.7708333333337" y="946.0" />
+              <point x="1536.875" y="946.0" />
+              <point x="0.0" y="70.0" />
+            </edge>
+          </edges>
+          <settings layout="Hierarchic Group" zoom="0.6" x="1441.98967679875" y="1073.0145352913491" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Fields</Category>
+          </Categories>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

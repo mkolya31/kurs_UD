@@ -34,6 +34,7 @@ urlpatterns = [
     # ORDERS
     url(r'^order$', views.order_out, name='order_out'),
     url(r'^order/add$', views.order_add, name='order_add'),
+    url(r'^order/view/(?P<order_id>[\w-]+)$', views.order_view, name='order_view'),
     url(r'^order/edit/(?P<order_id>[\w-]+)$', views.order_edit, name='order_edit'),
     url(r'^order/delete/(?P<order_id>[\w-]+)$', views.order_delete, name='order_delete'),
     # CATEGORY
@@ -101,5 +102,12 @@ urlpatterns = [
     url(r'^store$', views.store_out, name='store_out'),
     url(r'^store/add$', views.store_add, name='store_add'),
     url(r'^store/edit/(?P<store_id>[\w-]+)$', views.store_edit, name='store_edit'),
-    url(r'^store/delete/(?P<store_id>[\w-]+)$', views.store_delete, name='store_delete')
+    url(r'^store/delete/(?P<store_id>[\w-]+)$', views.store_delete, name='store_delete'),
+    # CUSTOMER_ADDRESS
+    url(r'^customerAddress$', views.customerAddress_out, name='customerAddress_out'),
+    url(r'^customerAddress/add$', views.customerAddress_add, name='customerAddress_add'),
+    url(r'^customerAddress/edit/(?P<customerAddress_id>[\w-]+)$', views.customerAddress_edit,
+        name='customerAddress_edit'),
+    url(r'^customerAddress/delete/(?P<customerAddress_id>[\w-]+)$', views.customerAddress_delete,
+        name='customerAddress_delete'),
 ]

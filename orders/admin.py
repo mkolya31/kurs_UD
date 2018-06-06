@@ -22,6 +22,11 @@ class DeliveryInline(admin.TabularInline):
     extra = 0
 
 
+class CustomerAddressInline(admin.TabularInline):
+    model = CustomerAddress
+    extra = 0
+
+
 class CategoryAdmin(admin.ModelAdmin):  # CATEGORY
     list_display = [field.name for field in Category._meta.fields]
 
@@ -85,6 +90,7 @@ admin.site.register(Organization, OrganizationAdmin)
 
 class CustomerAdmin(admin.ModelAdmin):
     list_display = [field.name for field in Customer._meta.fields]
+    inlines = [CustomerAddressInline]
 
     class Meta:
         model = Customer
@@ -203,5 +209,34 @@ class StoreAdmin(admin.ModelAdmin):
 
 admin.site.register(Store, StoreAdmin)
 
+
+class OrgAddressAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in OrgAddress._meta.fields]
+
+    class Meta:
+        model = OrgAddress
+
+
+admin.site.register(OrgAddress, OrgAddressAdmin)
+
+
+class CustomerAddressAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in CustomerAddress._meta.fields]
+
+    class Meta:
+        model = CustomerAddress
+
+
+admin.site.register(CustomerAddress, CustomerAddressAdmin)
+
+
+class ProductCurrencyAdmin(admin.ModelAdmin):
+    list_display = [field.name for field in Currency._meta.fields]
+
+    class Meta:
+        model = Currency
+
+
+admin.site.register(Currency, ProductCurrencyAdmin)
 
 # Register your models here.
